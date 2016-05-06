@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Surveys" Id="3aa10243-49cc-4107-9914-82a8df98efc0" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Login" />
+    <TransactionTimer Name="Login">
+      <Items>
+        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Set Hierarchy" />
+    <TransactionTimer Name="Set Hierarchy">
+      <Items>
+        <IncludedWebTest Name="SetHierarchy" Path="..\global tests\sethierarchy.webtest" Id="61cbf038-7287-4a5d-ae16-e56e81335852" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Survey" />
+    <TransactionTimer Name="Survey">
+      <Items>
+        <Request Method="GET" Guid="12c1ac1e-f54a-492b-bb96-6889cdf7d535" Version="1.1" Url="{{ServerUrl}}/feedback" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;b5ac1bd2f996b1f805a33e1338db8a7b&quot;" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="surveyId" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
+              <RuleParameters>
+                <RuleParameter Name="TagName" Value="a" />
+                <RuleParameter Name="AttributeName" Value="data-id" />
+                <RuleParameter Name="MatchAttributeName" Value="class" />
+                <RuleParameter Name="MatchAttributeValue" Value="view-link" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Select a Survey to View" />
+    <TransactionTimer Name="Select a Survey to Review">
+      <Items>
+        <Request Method="GET" Guid="00f22eb8-a993-4dd5-8ef0-25dd95230fbc" Version="1.1" Url="{{ServerUrl}}/feedback/{{surveyId}}" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Download with PHI" />
+    <TransactionTimer Name="Download with PHI">
+      <Items>
+        <Request Method="GET" Guid="9a0681ad-8fe6-4a2f-ac04-ad32a5830890" Version="1.1" Url="{{ServerUrl}}/feedback.xls" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="date_type" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="None" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[location]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[employee]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[has_review]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[followup_required]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[allow_future_contact]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[status]" Value="active" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="skip_phi" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="selected_ids" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Uncheck PHI and Download" />
+    <TransactionTimer Name="Uncheck PHI and Download">
+      <Items>
+        <Request Method="GET" Guid="a9ab41eb-1223-46ed-ad4a-2d31e852ee4d" Version="1.1" Url="{{ServerUrl}}/feedback" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="text_filter" Value="madhuri.m-ext@influencehealth.com" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="34bb0542-0a0a-4071-8316-8a358f0b4ab0" Version="1.1" Url="{{ServerUrl}}/api/validate_user_password" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="password" Value="{{Users.Users#csv.Password}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="a9024f94-aafd-4aeb-ac65-a3f26563b808" Version="1.1" Url="{{ServerUrl}}/feedback.xls" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="date_type" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="None" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[location]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[employee]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[has_review]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[followup_required]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[allow_future_contact]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[status]" Value="active" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="selected_ids" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <IncludedWebTest Name="Logout" Path="..\global tests\logout.webtest" Id="d3fdf484-19a8-4f02-9276-177652939958" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="" />
+  </Items>
+  <DataSources>
+    <DataSource Name="Users" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\..\..\Data\Users.csv">
+      <Tables>
+        <DataSourceTable Name="Users#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+  </WebTestPlugins>
+</WebTest>

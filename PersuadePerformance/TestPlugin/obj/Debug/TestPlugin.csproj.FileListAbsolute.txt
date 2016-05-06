@@ -1,0 +1,7 @@
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\bin\Debug\TestPlugin.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\bin\Debug\TestPlugin.pdb
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\bin\Debug\Newtonsoft.Json.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\bin\Debug\Newtonsoft.Json.xml
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\obj\Debug\TestPlugin.csprojResolveAssemblyReference.cache
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\obj\Debug\TestPlugin.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\TestPlugin\obj\Debug\TestPlugin.pdb

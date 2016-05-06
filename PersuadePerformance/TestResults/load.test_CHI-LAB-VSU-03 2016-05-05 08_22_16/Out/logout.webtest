@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Logout" Id="d3fdf484-19a8-4f02-9276-177652939958" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <Request Method="GET" Guid="4ef99a10-1934-4a6a-a92d-f55778cf82d9" Version="1.1" Url="{{ServerUrl}}/sign_out" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="7d660ecf-06d9-46b2-bd26-26a63c68c537" Version="1.1" Url="{{ServerUrl}}/sign_in" ThinkTime="0" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="" />
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+  </ContextParameters>
+</WebTest>

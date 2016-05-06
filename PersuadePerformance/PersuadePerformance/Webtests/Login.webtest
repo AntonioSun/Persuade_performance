@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Login" Id="7704a8c1-8236-4cb1-8a03-fcb9d5264e83" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="WebTest3.a930bf57-eae8-4812-9f7f-c24c60e7b5ae.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Landing Page" />
+    <TransactionTimer Name="Landing Page">
+      <Items>
+        <Request Method="GET" Guid="cceebe68-a3d1-436e-b9cf-abff0290616d" Version="1.1" Url="{{ServerUrl}}/sign_in" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <DependentRequests>
+            <Request Method="GET" Guid="e8aa6680-9074-4aaa-8555-088d53d3c045" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTeY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="01fc72b5-06de-4880-a3eb-a5c582298028" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxtws6VUGd0SOnU-R_teOl7k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="6d8ebbb3-7514-44f8-90c2-f77caf9a786b" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="47595c9c-1e2c-4423-81be-8bb6e0337888" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/O4NhV7_qs9r9seTo7fnsVLO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="e798a65a-8e4e-4b33-850c-3ea3aec8a3e3" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSuY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="8fcb58ab-97a6-4545-8e21-09a05e3ffcc5" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxrMceF-wWi3rV7g1_WXZh1k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="c45401bc-fa3a-4889-b781-2842bfb98e78" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzOY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="a227ae15-efb9-45f8-8f0b-6fa56d7aec1f" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxiXIwCIIu6QKBvrtc7ntuuI.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+            <Request Method="GET" Guid="0b56d6cc-6064-4984-96c3-1603347f8c74" Version="1.1" Url="{{WebServer2}}/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-huY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+              </Headers>
+            </Request>
+          </DependentRequests>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="csrf-token" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
+              <RuleParameters>
+                <RuleParameter Name="TagName" Value="meta" />
+                <RuleParameter Name="AttributeName" Value="content" />
+                <RuleParameter Name="MatchAttributeName" Value="name" />
+                <RuleParameter Name="MatchAttributeValue" Value="csrf-token" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.commit" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="commit" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Credentials" />
+    <TransactionTimer Name="Credentials">
+      <Items>
+        <Request Method="POST" Guid="09a4d89f-483d-4d8f-a751-776bc5982630" Version="1.1" Url="{{ServerUrl}}/sign_in" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{ServerUrl}}/dashboard" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+            <Header Name="X-CSRF-TOKEN" Value="{{csrf-token}}" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="csrf-token" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
+              <RuleParameters>
+                <RuleParameter Name="TagName" Value="meta" />
+                <RuleParameter Name="AttributeName" Value="content" />
+                <RuleParameter Name="MatchAttributeName" Value="name" />
+                <RuleParameter Name="MatchAttributeValue" Value="csrf-token" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="window_resolution" Value="1103x674" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="user[email]" Value="{{Users.Users#csv.Username}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="user[password]" Value="{{Users.Users#csv.Password}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="commit" Value="Sign in" RecordedValue="" CorrelationBinding="{{FormPostParam1.commit}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="" />
+  </Items>
+  <DataSources>
+    <DataSource Name="Users" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\..\Data\Users.csv">
+      <Tables>
+        <DataSourceTable Name="Users#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+    <ContextParameter Name="WebServer2" Value="https://themes.googleusercontent.com" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+  </WebTestPlugins>
+</WebTest>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Login" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Landing Page" />
+    <TransactionTimer Name="Landing Page">
+      <Items>
+        <Request Method="GET" Guid="2f67eb3a-6065-446c-8768-b2027a7cdca5" Version="1.1" Url="{{ServerUrl}}/" ThinkTime="0" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;202ef1e9e7b2d8cac9844e5b71e49b54&quot;" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="login" />
+    <TransactionTimer Name="Login">
+      <Items>
+        <Request Method="POST" Guid="a7d6a4f3-941a-4aec-8571-e0236f5b53fd" Version="1.1" Url="{{ServerUrl}}/sign_in" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="Login" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/sign_in" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+            <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="authToken" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
+              <RuleParameters>
+                <RuleParameter Name="TagName" Value="meta" />
+                <RuleParameter Name="AttributeName" Value="content" />
+                <RuleParameter Name="MatchAttributeName" Value="name" />
+                <RuleParameter Name="MatchAttributeValue" Value="csrf-token" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="window_resolution" Value="1103x674" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="user[email]" Value="{{Users.Users#csv.Username}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="user[password]" Value="{{Users.Users#csv.Password}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="commit" Value="Sign in" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <DataSources>
+    <DataSource Name="Users" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\..\..\Data\Users.csv">
+      <Tables>
+        <DataSourceTable Name="Users#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Random" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+  </WebTestPlugins>
+</WebTest>

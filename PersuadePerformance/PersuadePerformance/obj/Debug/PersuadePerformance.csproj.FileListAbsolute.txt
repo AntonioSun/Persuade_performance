@@ -1,0 +1,55 @@
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\FacebookSetHierarchy.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade.loadtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\PERS-1638_FBAds.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\PERS-1626_FBCampaigns.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\PERS-1627_FBStats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\PERS-1673_FBSnapShot.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\PERS-1628_Targeting.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1676_GoogleSnapShot.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1678_GoogleAds.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Library\PERS-1658_Creative.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\PERS-1666_Pages.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\PERS-1667_Tabs.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1687_GoogleAdWords.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1681_GoogleCampaigns.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Library\PERS-1640_FormFields.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Library\PERS-1641_Forms.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\SetHierarchy.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\GoogleSetHierarchy.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1639_GoogleStats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Library\PERS-1670_Sites.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\PERS-1661_Reviwes.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\PERS-1662_Surveys.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1683_BudgetTracker.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1684_ConsoleStats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1685_DirectoryIssues.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1686_DirectoryStats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1688_LeadStats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1689_Medicom.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1690_Monthly.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1692_TableauReports.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\PERS-1691_MonthlyLeads.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\ULM\PERS-1733_AI.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\ULM\PERS-1734_Leads.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\Login.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\Logout.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Library\PERS-1642_LandingPages.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Library\PERS-1669_SellingPoints.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\ULM\PERS-1735_Stats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\User Menu\PERS-1693_UserSettings.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\PersuadePerformance.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\PersuadePerformance.pdb
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\TestPlugin.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\WebTest.WebService.Plugin.Runtime.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\TestPlugin.pdb
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\obj\Debug\PersuadePerformance.csprojResolveAssemblyReference.cache
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\obj\Debug\PersuadePerformance.dll
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\obj\Debug\PersuadePerformance.pdb
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\Presence.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\test.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\Nurture Campaign.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\Nurture List.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\PERS-1694_ControlPanel.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\PERS-1694_Test2.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1677_GoogleControlPanel.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\convpix.webtest

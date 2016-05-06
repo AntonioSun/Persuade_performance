@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="hierarchyset" Id="6446e461-ebf4-44ad-8afc-98eb0f9a6faa" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <IncludedWebTest Name="Login" Path="..\login.webtest" Id="7704a8c1-8236-4cb1-8a03-fcb9d5264e83" IsCodedWebTest="False" InheritWebTestSettings="False" />
+    <Request Method="GET" Guid="0b05b7ec-201e-4a02-bbb1-9ab42f53c744" Version="1.1" Url="{{ServerUrl}}/facebook/control_panel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="5642b73d-c543-4dd8-898f-f495a482359b" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTeY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="3441be82-fd06-46a6-b486-459d779a2d18" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxtws6VUGd0SOnU-R_teOl7k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a087cc75-c821-4066-a511-80c9d5e1e5c5" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="1eec0c8a-804b-4064-8415-a02767e5f7de" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/O4NhV7_qs9r9seTo7fnsVLO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="fd2aff67-4de1-40b8-ae08-c8952dc42877" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSuY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="5b8162ae-477d-4b18-91b7-509f4620b0de" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxrMceF-wWi3rV7g1_WXZh1k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a7074bd7-28cc-47c9-bc19-28a2dede3dd4" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzOY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="353d5864-90b1-4452-8e54-e031f59eb185" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxiXIwCIIu6QKBvrtc7ntuuI.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="3428adce-c59f-4b97-9220-cafea93bcdc7" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-huY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="84abea19-295b-40bf-ae46-3247998a493e" Version="1.1" Url="{{ServerUrl}}/assets/bwiconfont-webfont-67855ca1f3e4e974764aeab81f1e1254.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="{{ServerUrl}}/dashboard/social/overview" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="0b05b7ec-201e-4a02-bbb1-9ab42f53c744" Version="1.1" Url="{{ServerUrl}}/leads?filter=interested" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="5642b73d-c543-4dd8-898f-f495a482359b" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTeY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="3441be82-fd06-46a6-b486-459d779a2d18" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxtws6VUGd0SOnU-R_teOl7k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a087cc75-c821-4066-a511-80c9d5e1e5c5" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="1eec0c8a-804b-4064-8415-a02767e5f7de" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/O4NhV7_qs9r9seTo7fnsVLO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="fd2aff67-4de1-40b8-ae08-c8952dc42877" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSuY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="5b8162ae-477d-4b18-91b7-509f4620b0de" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxrMceF-wWi3rV7g1_WXZh1k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a7074bd7-28cc-47c9-bc19-28a2dede3dd4" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzOY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="353d5864-90b1-4452-8e54-e031f59eb185" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxiXIwCIIu6QKBvrtc7ntuuI.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="3428adce-c59f-4b97-9220-cafea93bcdc7" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-huY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="84abea19-295b-40bf-ae46-3247998a493e" Version="1.1" Url="{{ServerUrl}}/assets/bwiconfont-webfont-67855ca1f3e4e974764aeab81f1e1254.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="{{ServerUrl}}/dashboard/social/overview" />
+      </Headers>
+    </Request>
+    <Request Method="PUT" Guid="4a261014-f4ff-4e1e-917b-444d9eae9cb0" Version="1.1" Url="{{ServerUrl}}/context.html" ThinkTime="2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{csrf-token}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="DNT" Value="1" />
+        <Header Name="Referer" Value="{{ServerUrl}}/dashboard" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="context[agency_id]" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="context[client_id]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="0b05b7ec-201e-4a02-bbb1-9ab42f53c744" Version="1.1" Url="{{ServerUrl}}/leads?filter=interested" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="5642b73d-c543-4dd8-898f-f495a482359b" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTeY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="3441be82-fd06-46a6-b486-459d779a2d18" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxtws6VUGd0SOnU-R_teOl7k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a087cc75-c821-4066-a511-80c9d5e1e5c5" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="1eec0c8a-804b-4064-8415-a02767e5f7de" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/O4NhV7_qs9r9seTo7fnsVLO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="fd2aff67-4de1-40b8-ae08-c8952dc42877" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSuY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="5b8162ae-477d-4b18-91b7-509f4620b0de" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxrMceF-wWi3rV7g1_WXZh1k.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a7074bd7-28cc-47c9-bc19-28a2dede3dd4" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzOY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="353d5864-90b1-4452-8e54-e031f59eb185" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxiXIwCIIu6QKBvrtc7ntuuI.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="3428adce-c59f-4b97-9220-cafea93bcdc7" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-huY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="84abea19-295b-40bf-ae46-3247998a493e" Version="1.1" Url="{{ServerUrl}}/assets/bwiconfont-webfont-67855ca1f3e4e974764aeab81f1e1254.eot" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/facebook/control_panel" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="{{ServerUrl}}/dashboard/social/overview" />
+      </Headers>
+    </Request>
+  </Items>
+</WebTest>

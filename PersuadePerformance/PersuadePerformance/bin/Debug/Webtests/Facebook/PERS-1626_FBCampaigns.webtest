@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="PERS-1626" Id="d7a216ba-dd89-476f-8319-d7def216508b" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Login" />
+    <TransactionTimer Name="Login">
+      <Items>
+        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Set Hierarchy" />
+    <TransactionTimer Name="Set Hierarchy">
+      <Items>
+        <IncludedWebTest Name="FacebookSetHierarchy" Path="..\global tests\facebooksethierarchy.webtest" Id="61c300c0-ffed-4ee3-9546-737082702bda" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Library - Facebook - Campaigns" />
+    <TransactionTimer Name="Library - Facebook - Campaigns">
+      <Items>
+        <Request Method="GET" Guid="2523f520-283c-4a9c-b212-e94eb2c3bf55" Version="1.1" Url="{{ServerUrl}}/manage/campaigns" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="Campaigns" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Create Campaign" />
+    <TransactionTimer Name="Create Campaign">
+      <Items>
+        <Request Method="GET" Guid="271e9a25-37ea-487c-8041-5e88fc902257" Version="1.1" Url="{{ServerUrl}}/campaigns/new" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="New Campaign" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="account_type" Value="Facebook" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Set Tier 3" />
+    <TransactionTimer Name="Set Tier 3">
+      <Items>
+        <Request Method="GET" Guid="6629dce7-ba67-4648-b9bc-92f4aede447d" Version="1.1" Url="{{ServerUrl}}/targeting_profiles" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="Targeting" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="reachEstimate" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="(Reach: " />
+                <RuleParameter Name="EndsWith" Value=")" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="targetingProfileId" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="Akron (" />
+                <RuleParameter Name="EndsWith" Value=") Alabama" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="selection" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="6e00b72a-bb10-4f45-be1d-7e7fd9c95548" Version="1.1" Url="{{ServerUrl}}/whistler/v1/bw/targeting/sentences" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="{{targetingProfileId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="business_unit_id" Value="{{FacebookHierarchy.FacebookHierarchy#csv.Tier3Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="class" Value="TargetingProfile" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Save Campaign" />
+    <TransactionTimer Name="Save Campaign">
+      <Items>
+        <Request Method="POST" Guid="515cbfd1-a9d9-4680-ac31-3bd7c4564d26" Version="1.1" Url="{{ServerUrl}}/campaigns" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="Save Campaign" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Origin" Value="{{ServerUrl}}" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{authToken}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="agency_id" Value="{{FacebookHierarchy.FacebookHierarchy#csv.Tier1Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[client_id]" Value="{{FacebookHierarchy.FacebookHierarchy#csv.Tier2Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[business_unit_id]" Value="{{FacebookHierarchy.FacebookHierarchy#csv.Tier3Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[name]" Value="perfFbCampaign{{seedNumber}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[account_type]" Value="Facebook" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[status]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[is_active]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[budget_attributes][amount]" Value="10" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[budget_attributes][budget_type]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[is_premium]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[lifetime_impressions]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[reach_estimate]" Value="{{reachEstimate}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[targeting_profile_id]" Value="{{targetingProfileId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[confidence_level]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[bid_type]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[max_bid]" Value="0.1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[reach_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[spent_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[eng_rate_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[reach_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[spent_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[link_ctr_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[cvr_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="a20a0afb-8222-45e8-b44a-628750f922e7" Version="1.1" Url="{{ServerUrl}}/manage/campaigns" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="perfFbCampaign{{seedNumber}}" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <IncludedWebTest Name="Logout" Path="..\global tests\logout.webtest" Id="d3fdf484-19a8-4f02-9276-177652939958" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="" />
+  </Items>
+  <DataSources>
+    <DataSource Name="FacebookHierarchy" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\..\..\Data\FacebookHierarchy.csv">
+      <Tables>
+        <DataSourceTable Name="FacebookHierarchy#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+    <ContextParameter Name="authToken" Value="" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+    <WebTestPlugin Classname="TestPlugin.Seed, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Seed" Description="" />
+  </WebTestPlugins>
+</WebTest>

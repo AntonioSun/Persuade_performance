@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="FBCampaign" Id="a27751bb-bcd3-4200-8c4a-9ec6381da1df" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <IncludedWebTest Name="Login" Path="login.webtest" Id="d18e36ac-33af-494f-93ef-6e72ae7e320d" IsCodedWebTest="False" InheritWebTestSettings="False" />
+    <Request Method="GET" Guid="d127822d-44cb-49c9-93a4-29a7af86635d" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="-35" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="pl" Value="1442932796739" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtSWwoWS1dfa0FQXl1YHl0KBlxA" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ap" Value="1635" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="be" Value="1805" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fe" Value="1433" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="dc" Value="584" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1442932796739,&quot;n&quot;:0,&quot;u&quot;:1797,&quot;ue&quot;:1798,&quot;dl&quot;:1806,&quot;di&quot;:2402,&quot;ds&quot;:2403,&quot;de&quot;:2655,&quot;dc&quot;:3237,&quot;l&quot;:3237,&quot;le&quot;:3245,&quot;f&quot;:0,&quot;dn&quot;:0,&quot;dne&quot;:0,&quot;c&quot;:5,&quot;ce&quot;:34,&quot;s&quot;:32,&quot;rq&quot;:34,&quot;rp&quot;:1796,&quot;rpe&quot;:1799},&quot;navigation&quot;:{&quot;ty&quot;:1}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="f6ec665d-ce03-4c37-9533-1d0a120a051c" Version="1.1" Url="{{UIServerUrl}}/campaigns/new" ThinkTime="31" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+        <Header Name="X-CSRF-Token" Value="ZIWtl0GuuuSzvFm6ayOAAoQ3XLeCeyK4IMRNCMJbEvQ=" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;443b8f99f0b4b28a00b24376b09030b6&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="from_control_panel" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="business_unit_id" Value="3230" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="campaign[account_type]" Value="Facebook" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="aa00241c-5097-44b0-b6b0-7c9555f32d34" Version="1.1" Url="{{UIServerUrl}}/facebook/control_panel/3230" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+        <Header Name="X-CSRF-Token" Value="ZIWtl0GuuuSzvFm6ayOAAoQ3XLeCeyK4IMRNCMJbEvQ=" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-PJAX" Value="true" />
+        <Header Name="If-None-Match" Value="&quot;1fb72b7824bf8d77a44a598cbb5b57c0&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a13f6fb0-be18-4df7-8609-0720c7193100" Version="1.1" Url="{{UIServerUrl}}/facebook/control_panel/3230" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b4111054-ec9c-4c4d-905a-cfe673051cf8" Version="1.1" Url="{{UIServerUrl}}/assets/bwiconfont-webfont-8ce0ac865a7bb99e8df799ad65d093f7.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;3599-6b24-52046f1fa26e9&quot;" />
+        <Header Name="If-Modified-Since" Value="Mon, 21 Sep 2015 19:32:43 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="e8450f68-14b7-4444-b42e-8847b08514e9" Version="1.1" Url="{{UIServerUrl}}/pusher/auth" ThinkTime="13" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+        <Header Name="Origin" Value="{{UIServerUrl}}" />
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="socket_id" Value="74066.11027598" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="da2076ed-6e8c-43b7-94b6-0c53663190f4" Version="1.1" Url="{{UIServerUrl}}/whistler/v1/bw/sync_logs/sync_status" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+        <Header Name="X-CSRF-Token" Value="ZIWtl0GuuuSzvFm6ayOAAoQ3XLeCeyK4IMRNCMJbEvQ=" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="c" Value="Campaign" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="i" Value="6484" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="d19d9fd8-462c-4e8e-bc71-d2972102c631" Version="1.1" Url="{{UIServerUrl}}/whistler/v1/bw/sync_logs/sync_status" ThinkTime="-13" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+        <Header Name="X-CSRF-Token" Value="ZIWtl0GuuuSzvFm6ayOAAoQ3XLeCeyK4IMRNCMJbEvQ=" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;90f0efbb3d39260a605bbd3d7f8ea9ad&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="c" Value="Campaign" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="i" Value="6484" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="64cf2dec-b7f1-4850-9c57-050e3529e182" Version="1.1" Url="https://stats.pusher.com/timeline/v2/jsonp/1" ThinkTime="-24" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="session" Value="NjUzOTcyMg==" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bundle" Value="MQ==" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="key" Value="OGY5MWFmNjBiNWI2YjFjZmYwM2Q=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="lib" Value="anM=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="version" Value="Mi4yLjQ=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="features" Value="WyJ3cyIsImZsYXNoIl0=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="timeline" Value="W3siaW5zdGFuY2VzIjoxLCJ0aW1lc3RhbXAiOiIyMDE1LTA5LTIyVDE0OjM5OjU5LjIxMVoifSx7InN0YXRlIjoiY29ubmVjdGluZyIsInRpbWVzdGFtcCI6IjIwMTUtMDktMjJUMTQ6Mzk6NTkuMjEyWiJ9LHsiY2lkIjoxLCJ0cmFuc3BvcnQiOiJ3c3MiLCJ0aW1lc3RhbXAiOiIyMDE1LTA5LTIyVDE0OjM5OjU5LjIxNVoifSx7ImNpZCI6MSwic3RhdGUiOiJpbml0aWFsaXplZCIsInRpbWVzdGFtcCI6IjIwMTUtMDktMjJUMTQ6Mzk6NTkuMjE1WiJ9LHsiY2lkIjoxLCJzdGF0ZSI6ImNvbm5lY3RpbmciLCJ0aW1lc3RhbXAiOiIyMDE1LTA5LTIyVDE0OjM5OjU5LjIxNloifSx7ImNpZCI6MSwic3RhdGUiOiJvcGVuIiwidGltZXN0YW1wIjoiMjAxNS0wOS0yMlQxNDozOTo1OS40MzJaIn0seyJzdGF0ZSI6ImNvbm5lY3RlZCIsInBhcmFtcyI6eyJzb2NrZXRfaWQiOiI3NDA2Ni4xMTAyNzU5OCJ9LCJ0aW1lc3RhbXAiOiIyMDE1LTA5LTIyVDE0OjM5OjU5LjQzNloifV0=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="0086d63d-c2ad-44d9-8f7b-82c9e13cde1d" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="24" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="{{UIServerUrl}}" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 May 2015 18:51:37 GMT" />
+        <Header Name="X-Client-Data" Value="CIu2yQEIprbJAQiptskBCMS2yQEI7YjKAQj9lcoB" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b028ef27-0073-458a-bca8-2c81ee24c9d2" Version="1.1" Url="https://ws.pusherapp.com/app/8f91af60b5b6b1cff03d" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Pragma" Value="no-cache" />
+        <Header Name="Upgrade" Value="websocket" />
+        <Header Name="Origin" Value="{{UIServerUrl}}" />
+        <Header Name="Sec-WebSocket-Version" Value="13" />
+        <Header Name="Sec-WebSocket-Key" Value="02evRu7on++8feN8/ECsYA==" />
+        <Header Name="Sec-WebSocket-Extensions" Value="permessage-deflate; client_max_window_bits" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="protocol" Value="7" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="client" Value="js" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="version" Value="2.2.4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="flash" Value="false" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+</WebTest>

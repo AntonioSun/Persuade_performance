@@ -1,0 +1,10 @@
+C:\Users\load.test\Desktop\BrightWhistle\BrightWhistle\TestPlugins\bin\Debug\TestPlugins.dll
+C:\Users\load.test\Desktop\BrightWhistle\BrightWhistle\TestPlugins\bin\Debug\TestPlugins.pdb
+C:\Users\load.test\Desktop\BrightWhistle\BrightWhistle\TestPlugins\obj\Debug\TestPlugins.csprojResolveAssemblyReference.cache
+C:\Users\load.test\Desktop\BrightWhistle\BrightWhistle\TestPlugins\obj\Debug\TestPlugins.dll
+C:\Users\load.test\Desktop\BrightWhistle\BrightWhistle\TestPlugins\obj\Debug\TestPlugins.pdb
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\TestPlugins\bin\Debug\TestPlugins.dll
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\TestPlugins\bin\Debug\TestPlugins.pdb
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\TestPlugins\obj\Debug\TestPlugins.csprojResolveAssemblyReference.cache
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\TestPlugins\obj\Debug\TestPlugins.dll
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\TestPlugins\obj\Debug\TestPlugins.pdb

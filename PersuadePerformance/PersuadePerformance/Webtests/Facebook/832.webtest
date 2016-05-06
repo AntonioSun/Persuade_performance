@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="832" Id="e7d481aa-5f52-46f8-9f99-a3d885a59335" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <IncludedWebTest Name="Login_U" Path="login_u.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+    <Comment CommentText="Set Hierarchy" />
+    <TransactionTimer Name="Set Hierarchy">
+      <Items>
+        <Request Method="PUT" Guid="1868ef12-ab3a-41ac-83be-84c848dfc073" Version="1.1" Url="{{ServerUrl}}/context.html" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Origin" Value="{{ServerUrl}}" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="context[agency_id]" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="context[client_id]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody />
+        </Request>
+        <Request Method="GET" Guid="f075c432-e190-408e-852d-742f9232ab78" Version="1.1" Url="{{ServerUrl}}/dashboard" ThinkTime="-2" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{ServerUrl}}/" />
+            <Header Name="If-None-Match" Value="&quot;a70e624d12378b379514e37824e03286&quot;" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Facebook Snapshot" />
+    <TransactionTimer Name="Facebook Snapshot">
+      <Items>
+        <Request Method="GET" Guid="5a87807b-1551-4df7-b869-4f848d6e2c4c" Version="1.1" Url="{{ServerUrl}}/dashboard/social/overview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="c696e2ee-bf69-47ed-ae12-9eeae0af22f6" Version="1.1" Url="{{ServerUrl}}/dashboard" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="If-None-Match" Value="&quot;79dc7ad002d65ceabe1b57a585a922ff&quot;" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Facebook Control Panel" />
+    <TransactionTimer Name="Facebook Control Panel">
+      <Items>
+        <Request Method="GET" Guid="3451acb4-bbb6-43b5-8e9f-d2ffd5d671d7" Version="1.1" Url="{{ServerUrl}}/facebook/control_panel" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a69f5c2d-5510-4824-b6c8-73e2a250cb94" Version="1.1" Url="{{ServerUrl}}/dashboard" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="If-None-Match" Value="&quot;22cfb4b72894aba71174219147d91e69&quot;" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Set Tier 3" />
+    <TransactionTimer Name="Set Tier 3">
+      <Items>
+        <Request Method="GET" Guid="d2b78d46-b11e-425e-947d-c03f551aaf65" Version="1.1" Url="{{ServerUrl}}/facebook/control_panel/2701" ThinkTime="-3" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="04b458f1-d120-489d-b12b-387c2b40ffe8" Version="1.1" Url="{{ServerUrl}}/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="ULmuMWqMF1hk61ih7POEfGdgcVw1JDB+OZPD1iMuszo=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="58" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="uid" Value="89e08a3e-9acf-4687-be94-2aa49030de7d" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Add Campaign" />
+    <TransactionTimer Name="Add Campaign">
+      <Items>
+        <Request Method="GET" Guid="e2ac1011-3d3a-44c1-b995-b0f3f7838c70" Version="1.1" Url="{{ServerUrl}}/campaigns/new" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="from_control_panel" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="business_unit_id" Value="2701" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="campaign[account_type]" Value="Facebook" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="45230975-0f9f-47ab-83fb-c78e14dfc523" Version="1.1" Url="{{ServerUrl}}/targeting_profiles" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="client_id" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="selection" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Save Campaign" />
+    <TransactionTimer Name="Save Campaign">
+      <Items>
+        <Request Method="POST" Guid="468ea0f8-a198-4872-b2e2-0f75240d806d" Version="1.1" Url="{{ServerUrl}}/campaigns" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Origin" Value="{{ServerUrl}}" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{authToken}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="agency_id" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[client_id]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[business_unit_id]" Value="2701" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[name]" Value="perfFbCampaign{{seedNumber}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[account_type]" Value="Facebook" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[status]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[is_active]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[budget_attributes][amount]" Value="100" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[budget_attributes][budget_type]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[is_premium]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[lifetime_impressions]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[reach_estimate]" Value="140" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[targeting_profile_id]" Value="502" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[confidence_level]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[bid_type]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[max_bid]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[reach_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[spent_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[eng_rate_cpm_thres]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[reach_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[spent_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[link_ctr_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[cvr_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="450d0c6d-638a-455b-81c3-b1a04efd6a44" Version="1.1" Url="{{ServerUrl}}/facebook/control_panel/2701" ThinkTime="-3" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+            <Header Name="If-None-Match" Value="&quot;4d873a84b045669f87a3b72f14e6a17f&quot;" />
+          </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="perfFbCampaign{{seedNumber}}" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="97ba1fb6-a815-4065-8f74-8d2efbc48dff" Version="1.1" Url="{{ServerUrl}}/whistler/v1/bw/posts/link_preview" ThinkTime="-2" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="58" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="uid" Value="2f0d5f08-1b02-43e5-b488-bea007a1725a" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="77c78bcf-d7e2-4fc6-ab47-db4dade2ecbc" Version="1.1" Url="{{ServerUrl}}/dashboard" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="If-None-Match" Value="&quot;6d52feb1517cfdca985c4116daa4715d&quot;" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="" />
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+    <ContextParameter Name="authToken" Value="" />
+    <ContextParameter Name="seedNumber" Value="" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+    <WebTestPlugin Classname="TestPlugin.Seed, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Seed" Description="" />
+  </WebTestPlugins>
+</WebTest>

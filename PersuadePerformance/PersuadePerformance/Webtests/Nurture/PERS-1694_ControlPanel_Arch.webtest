@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="PERS-1694_ControlPanel" Id="2f1fb9ab-aefc-4779-b993-5db6da53c028" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+    <Comment CommentText="Control Panel" />
+    <Request Method="GET" Guid="973b1c50-c042-4556-ba96-c865d18a3c46" Version="1.1" Url="{{ServerUrl}}/ng_control_panel/email" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+        <Header Name="If-None-Match" Value="&quot;47dc7080fc6f9798998515d184dd415f&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="d658d246-cb72-437e-9229-13212e4e3839" Version="1.1" Url="{{ServerUrl}}/ng_control_panel_columns/email.json" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;247edecd6db4a5a86961e8643cc1413e&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="f1c49d86-e481-464e-9461-7b1583c22032" Version="1.1" Url="{{ServerUrl}}/whistler/v1/bw/hierarchy/show" ThinkTime="-11" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;4000dcef87abb1f24bf667a5dd7cc446&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="7938992c-b0ec-41f5-a532-15b021688dd0" Version="1.1" Url="{{ServerUrl}}/email_campaigns.json" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;93d3110d80882d954c1f555f2fe159e4&quot;" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="campaignId" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="{&quot;id&quot;:" />
+            <RuleParameter Name="EndsWith" Value="," />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="ExtractRandomMatch" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="SearchInHeaders" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="page" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="82e102f0-f3ff-468b-8e51-3b10c1aa495c" Version="1.1" Url="{{ServerUrl}}/emails.json" ThinkTime="-3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;9c9250f821e7187034bea704e321443f&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="page" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="9ab1f459-5fef-41a2-855d-688440891752" Version="1.1" Url="{{ServerUrl}}/email_creatives.json" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;d9bcd39bfabc2f5c8f3db91901ad391e&quot;" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="creativeId" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="{&quot;id&quot;:" />
+            <RuleParameter Name="EndsWith" Value="," />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="ExtractRandomMatch" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="SearchInHeaders" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="page" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="21e8d0cd-5cf6-487e-945f-9953624b0072" Version="1.1" Url="{{ServerUrl}}/phone_numbers.json" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;71cc92a3588a8a14f34635dd2671f09c&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="page" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="parameters[channel]" Value="Email" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="eda45df2-5b46-4135-ab82-ea0bdc681139" Version="1.1" Url="{{ServerUrl}}/landing_pages.json" ThinkTime="-6" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;a7a6f14c3757cd00296418894d391d8f&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="page" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e81a8c70-afb6-4283-9c80-82fa5d086d1a" Version="1.1" Url="{{ServerUrl}}/leads.json" ThinkTime="-19" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="page" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a58ac434-df1e-4ee3-b90e-b1d2979f95e7" Version="1.1" Url="{{ServerUrl}}/email_campaigns/filters" ThinkTime="-17" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;de40a6222b8fde74acaf7ac6c51afee6&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="1a1a10be-db7b-4935-ae90-70b4abebada8" Version="1.1" Url="{{ServerUrl}}/emails/filters" ThinkTime="-18" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;da540861d74444a9633df62169579c83&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="d984a309-de32-48e7-8638-41445282af84" Version="1.1" Url="{{ServerUrl}}/email_creatives/filters" ThinkTime="-15" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;3170e7f9b4329952430013f22ddf3a75&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b59a0acb-bf96-4069-b8d0-91c5ff196bc9" Version="1.1" Url="{{ServerUrl}}/phone_numbers/filters" ThinkTime="-13" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;4f14246a8182637b93a34ae1742c927a&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="3c3258ca-ec1a-4d0d-b3c4-e1225841b821" Version="1.1" Url="{{ServerUrl}}/landing_pages/filters" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;c927b1005ca60995acc2ec874ac0ab80&quot;" />
+      </Headers>
+    </Request>
+    <Comment CommentText="Click a Campaign" />
+    <Request Method="GET" Guid="e6cbdf68-f310-4342-8391-7edf0b2c0a60" Version="1.1" Url="{{ServerUrl}}/leads/filters" ThinkTime="-10" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;0eefa3b5ab0abc6256fdc7c99823b544&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="71e004b0-765a-4c16-aa34-e42b1994390b" Version="1.1" Url="{{ServerUrl}}/email_campaigns/4524/edit" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;dd2234e69b0189de8842cc92cef8f138&quot;" />
+      </Headers>
+    </Request>
+    <Comment CommentText="Click an Email" />
+    <Request Method="GET" Guid="ff8f57e7-c604-499a-83b6-7f216c2a33d7" Version="1.1" Url="{{ServerUrl}}/emails/31/edit" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;4f5ee64c6164bbe7f25ee891c8529a47&quot;" />
+      </Headers>
+    </Request>
+    <Comment CommentText="Click a Creative" />
+    <Request Method="GET" Guid="0aac322b-5767-4d4f-adb0-165db545037b" Version="1.1" Url="{{ServerUrl}}/email_creatives/42/edit" ThinkTime="3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;f31e72d6362183b7c75f3fd246ad1714&quot;" />
+      </Headers>
+    </Request>
+    <Comment CommentText="Click a Landing Page" />
+    <Request Method="GET" Guid="3ea9972e-03b3-4f59-8df3-9400760648ed" Version="1.1" Url="{{ServerUrl}}/landing_pages/2759/edit" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="7fdaa90d-a2e3-486a-a237-b4f2345a6931" Version="1.1" Url="{{ServerUrl}}/api/get_landing_page_content/bf6192b9-ff37-417b-a9b1-6d63993eccbd" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="skip_lead" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="0383308d-736c-435b-b402-eb5fa15f6e17" Version="1.1" Url="{{ServerUrl}}/api/get_landing_page_content/bf6192b9-ff37-417b-a9b1-6d63993eccbd" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="skip_lead" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="6bc19783-c3c1-4fc8-9a9c-204061223ccd" Version="1.1" Url="{{ServerUrl}}/api/get_landing_page_content" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="{{ServerUrl}}" />
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="skip_lead" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="_method" Value="put" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="authenticity_token" Value="{{authToken}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="id" Value="2759" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[agency_id]" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[client_id]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[business_unit_id]" Value="2701" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[name]" Value="perfLandingPage30312" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[type]" Value="ContactLandingPage" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[tab_label]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="landing-page-url" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[thank_you_override]" Value="form_builder" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][free_form_phone]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][phone_swapper]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][phone_text_before]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][phone_text_after]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][phone_bg]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][phone_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][phone_highlight]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][mobile_button_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][form_bg]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][form_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][form_highlight]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][button_color]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][button_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][usp_image_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][usp_title]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][usp_list]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][usp_bg]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][usp_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][usp_highlight]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][header_image_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][callout_image_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][callout_content]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][callout_bg]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][callout_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][body_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][body_link]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][background]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][left_bar]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[color_data][right_bar]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][twitter_widget_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[description]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[use_risk_assessment]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[risk_assessment_url]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[risk_assessment_display_method]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[use_like_gate]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[like_gate_text]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[username]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[password]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[is_active]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[type]" Value="Templates::Basic" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="palette" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="landing_page[url_channel]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="facebook[page_option]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="campaign[option]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[conversion_pixel_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][phone_number_id]" Value="210" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][form_id]" Value="245" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][selling_point_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][callout_opacity]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="contact_landing_page[thank_you_body]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="template_attributes[data][body]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+  </ContextParameters>
+</WebTest>

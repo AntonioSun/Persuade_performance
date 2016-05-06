@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="PERS-1681" Id="2187c364-4bc7-4c6c-a05b-86af3aa7687b" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Login" />
+    <TransactionTimer Name="Login">
+      <Items>
+        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Google Campaign" />
+    <TransactionTimer Name="Google Campaign">
+      <Items>
+        <Request Method="GET" Guid="c104e6ef-ba49-40a8-9adf-0ebee7199e23" Version="1.1" Url="{{ServerUrl}}/google/manage/campaigns" ThinkTime="-21" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;0ba46753faf8a1e458ff587607f38609&quot;" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Click a Campaign" />
+    <TransactionTimer Name="Click a Campaign">
+      <Items>
+        <Request Method="GET" Guid="e5d587b5-3560-40b8-b5d6-861cd28ed5a8" Version="1.1" Url="{{ServerUrl}}/campaigns/4425/edit" ThinkTime="-10" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Create Campaign" />
+    <TransactionTimer Name="Create Campaign">
+      <Items>
+        <Request Method="GET" Guid="688f58dd-d4b7-443d-8cce-a0016feb3af2" Version="1.1" Url="{{ServerUrl}}/campaigns/new" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="If-None-Match" Value="&quot;f1ad510e22a8ee06c1b120faef04e33c&quot;" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="account_type" Value="Google" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Save" />
+    <TransactionTimer Name="Save">
+      <Items>
+        <Request Method="POST" Guid="f3769256-5b9a-4857-acd3-3965d51e9530" Version="1.1" Url="{{ServerUrl}}/campaigns" ThinkTime="-5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Origin" Value="{{ServerUrl}}" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{authToken}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="agency_id" Value="{{GoogleHierarchy.GoogleHierarchy#csv.Tier1Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[client_id]" Value="{{GoogleHierarchy.GoogleHierarchy#csv.Tier2Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[business_unit_id]" Value="{{GoogleHierarchy.GoogleHierarchy#csv.Tier3Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[name]" Value="testCamp" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[account_type]" Value="Google" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[status]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[is_active]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[budget_id]" Value="1706" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[ad_optimization]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[bidding_strategy]" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[advertising_channel_type]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_impressions]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_time]" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[freq_type]" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[template_attributes][data_dynamic_search_ads_domain_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[template_attributes][data_dynamic_search_ads_language_code]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[template_attributes][data_shopping_merchant_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[template_attributes][data_shopping_sales_country]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[template_attributes][data_shopping_campaign_priority]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[target_google_search]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[target_google_search]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[target_search_network]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[target_search_network]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[target_content_network]" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[avg_position_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[spent_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[ctr_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[qlty_score_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="campaign[cvr_threshold]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="354ced96-3fc0-4d65-9ce6-f0442fde2870" Version="1.1" Url="{{ServerUrl}}/google/manage/campaigns" ThinkTime="-25" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <IncludedWebTest Name="Logout" Path="..\global tests\logout.webtest" Id="d3fdf484-19a8-4f02-9276-177652939958" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <DataSources>
+    <DataSource Name="GoogleHierarchy" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\..\..\Data\GoogleHierarchy.csv">
+      <Tables>
+        <DataSourceTable Name="GoogleHierarchy#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+    <WebTestPlugin Classname="TestPlugin.Seed, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Seed" Description="" />
+  </WebTestPlugins>
+</WebTest>

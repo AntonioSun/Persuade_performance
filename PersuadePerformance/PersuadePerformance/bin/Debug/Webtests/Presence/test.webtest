@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="test" Id="72baed5a-d51b-4f0c-8590-878076daf050" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+    <Request Method="GET" Guid="17413548-0a20-47ae-b476-68b84bb8148b" Version="1.1" Url="http://COMMENT/Presence" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="a6511e24-a0e1-40f9-b9d5-78f5ee054708" Version="1.1" Url="https://staging.brightwhistle.com/perception/control_panel" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+        <Header Name="If-None-Match" Value="&quot;c8089c3379c2467433b5620dae4c5e29&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="c3336553-556e-47d9-9e5a-21693d895680" Version="1.1" Url="https://staging.brightwhistle.com/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="socket_id" Value="197264.3632571" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="2e866db9-4c54-4d2e-bd57-5e8ab9c55543" Version="1.1" Url="https://staging.brightwhistle.com/dashboard" ThinkTime="-6" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;3fb86a205ef317d991551d1316b9c8a4&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="b541a9da-5632-43e8-8c9f-928b61c9840c" Version="1.1" Url="http://COMMENT/Hierarchy" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="PUT" Guid="9857da26-c706-406d-a878-7f0709f3874c" Version="1.1" Url="https://staging.brightwhistle.com/context.html" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="context[agency_id]" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="context[client_id]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="20dcf925-4093-4e9f-b5a1-164e64f0d57a" Version="1.1" Url="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2" ThinkTime="3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="If-None-Match" Value="&quot;97493d3f11c0a3bd5cbd959f5d19b699&quot;" />
+        <Header Name="If-Modified-Since" Value="Fri, 27 Feb 2015 19:45:39 GMT" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="v" Value="4.3.0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3ba1e736-c184-4568-a6a7-7b2bbecc6969" Version="1.1" Url="https://staging.brightwhistle.com/perception/control_panel" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+        <Header Name="If-None-Match" Value="&quot;02034fc96c625b4c19b9a86a597c675e&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="416936f6-0551-4412-a8e5-65a535e44a78" Version="1.1" Url="https://staging.brightwhistle.com/assets/logo-persuade-main-c5f88d89538f16ca9c6543e95dfafdd9.svg" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;65a55-17f8-52ffe64bf2380&quot;" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 Apr 2016 19:42:22 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="dc9926e0-ac76-4102-8482-ea70698e72ac" Version="1.1" Url="https://staging.brightwhistle.com/assets/bwiconfont-webfont-524878e8a2e9293ef0d81f45101a07f2.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;626d8-6b24-52ffe64bf2380&quot;" />
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 Apr 2016 19:42:22 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="e320bf52-c057-4d86-adc8-6394af8e334b" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 May 2015 18:51:37 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="6774f460-75c1-45e3-b152-b821304c5cc5" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTeY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 May 2015 18:51:37 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="2c0e846a-16f8-4b56-991f-9baef2fdb263" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="228" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="f0abc6e4-71e5-4cce-9c1c-e32d763cd2ba" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a201ad8e-1858-4d5f-b433-819ad1e7b78e" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="125" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="1aa50643-2ec0-43f3-8417-2171ed7a594c" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="47368d03-0080-4af9-a0c5-b4c743117e55" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="67" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="100032ae-89cc-400b-a27a-6f5c9f1ffdef" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="bfbd7f93-f6e1-4304-92fe-4b83379fe37a" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="59" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="dacf7651-e996-404f-a3b3-31665f631b65" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="533778a7-10d3-46e7-9b84-6cac4730f2b7" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="117" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="a17b9757-5f8d-4cda-8daf-b60869307384" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="d40c6f9b-db2b-4e2f-ad86-f2b95f552048" Version="1.1" Url="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="If-None-Match" Value="&quot;97493d3f11c0a3bd5cbd959f5d19b699&quot;" />
+        <Header Name="If-Modified-Since" Value="Fri, 27 Feb 2015 19:45:39 GMT" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="v" Value="4.3.0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="36932ddf-4de9-4254-a242-ac9ceb4a3663" Version="1.1" Url="https://ws.pusherapp.com/app/d67c9edd7d08755a60dc" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Pragma" Value="no-cache" />
+        <Header Name="Upgrade" Value="websocket" />
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="Sec-WebSocket-Version" Value="13" />
+        <Header Name="Sec-WebSocket-Key" Value="EkzKmismPcWW6jrAjycvqw==" />
+        <Header Name="Sec-WebSocket-Extensions" Value="permessage-deflate; client_max_window_bits" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="protocol" Value="7" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="client" Value="js" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="version" Value="2.2.4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="flash" Value="false" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="1a4b9bfd-83ce-4848-bf32-a7df52834338" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="52166f3a-0ee8-445c-8ee9-d36fb7bc4a8e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="1c94f07a-9ec5-41b8-887d-c0952b64aac1" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="64" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="7cbbfd31-e2d0-4a3e-8c0b-25a48e0d6973" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="18a6a79a-dff7-476f-9676-e248b9711ac2" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="61" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="8512fb30-6a13-4b6e-88f1-a3b6b74596bf" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="ce638fe2-190e-46ec-ae92-ab1133c5ba65" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="9" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="8717feb1-1d87-4177-8aef-d92b8c46249e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="98ad12fa-5a3d-4939-9ed2-aa26d8647672" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="86" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="e794c382-d404-47a9-8133-2949b72b5300" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b42ad930-8732-4efe-8e75-f7164a0d8363" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="85" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="692b993b-c8bc-4c2e-8b9a-a58de2321ab6" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="4bd35b84-8864-40b8-b1e0-405e5c4d6187" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="84" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="0c2a7627-5fab-459b-9b11-733143ea3ccc" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7b546b57-a1bf-4750-b4e7-06406a9879a4" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="83" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="b6700256-e13e-4990-bcf1-12d4ec9f6c53" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a465c223-2018-45dc-8e70-eb7bb014d8e3" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="82" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="3b6d1d44-0fe7-4d9d-864f-b9ea379de30a" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3c52f529-dff7-4557-8f08-e387d2a0cb1b" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="76" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="34fca1d9-9f99-4395-ac48-77b5bc0b7c43" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="536efc23-b3df-400c-b58c-b04dc7cfec3f" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="68" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="953fc748-84e1-4f50-b0e0-76b77d786f51" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="fe5aa033-9790-4fec-bfa8-bbc02fb3f5a0" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="65" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="538e7e49-eba7-41fd-8240-3dbbc3605b2a" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="fe8736a1-3174-48a6-8ddc-2cc4c3f53e32" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="62" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="957a5b16-835d-49c3-8c6c-a3be3e8a23b5" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="d63256e2-f267-41ca-bd7b-ed660bac2e37" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="2197" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="1df7920b-b807-4feb-bafa-9539c6f4f12e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b71b821f-ec55-4224-94cc-ed847ce2c09f" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;c50dea64cfbffd5f012742193157f267&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="228" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="f0abc6e4-71e5-4cce-9c1c-e32d763cd2ba" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="1df5b363-5cfc-4f8c-a95f-733a9116a369" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;6bb21b198138720e5c3538e8b12435cb&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="125" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="1aa50643-2ec0-43f3-8417-2171ed7a594c" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a410ac07-6858-4873-94bd-9ccad916fb61" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;b1202e591d6751b3e41414ed56d87d49&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="67" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="100032ae-89cc-400b-a27a-6f5c9f1ffdef" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="fc0a2f69-ff8a-4071-930b-e1db0ac5c291" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;7bf8c25518fcfee90276b870e3571136&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="117" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="a17b9757-5f8d-4cda-8daf-b60869307384" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="91d9a313-ba54-47e4-85af-06a3cd28d1e0" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;d565a1d5f99f2bc89770b029a7ab5956&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="59" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="dacf7651-e996-404f-a3b3-31665f631b65" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="9f9ec280-b80a-4ede-af86-080dcf27d05c" Version="1.1" Url="https://stats.pusher.com/timeline/v2/jsonp/1" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="session" Value="ODMxODIzNTU4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bundle" Value="MQ==" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="key" Value="ZDY3YzllZGQ3ZDA4NzU1YTYwZGM=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="lib" Value="anM=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="version" Value="Mi4yLjQ=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="features" Value="WyJ3cyIsImZsYXNoIl0=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="timeline" Value="W3siaW5zdGFuY2VzIjoxLCJ0aW1lc3RhbXAiOiIyMDE2LTA0LTEyVDEyOjI2OjQxLjkyNloifSx7InN0YXRlIjoiY29ubmVjdGluZyIsInRpbWVzdGFtcCI6IjIwMTYtMDQtMTJUMTI6MjY6NDEuOTI3WiJ9LHsiY2lkIjoxLCJ0cmFuc3BvcnQiOiJ3c3MiLCJ0aW1lc3RhbXAiOiIyMDE2LTA0LTEyVDEyOjI2OjQxLjkyOVoifSx7ImNpZCI6MSwic3RhdGUiOiJpbml0aWFsaXplZCIsInRpbWVzdGFtcCI6IjIwMTYtMDQtMTJUMTI6MjY6NDEuOTI5WiJ9LHsiY2lkIjoxLCJzdGF0ZSI6ImNvbm5lY3RpbmciLCJ0aW1lc3RhbXAiOiIyMDE2LTA0LTEyVDEyOjI2OjQxLjkzMFoifSx7ImNpZCI6MSwic3RhdGUiOiJvcGVuIiwidGltZXN0YW1wIjoiMjAxNi0wNC0xMlQxMjoyNjo0Mi42MDVaIn0seyJzdGF0ZSI6ImNvbm5lY3RlZCIsInBhcmFtcyI6eyJzb2NrZXRfaWQiOiIxOTcyNjIuMzYzMjMzOCJ9LCJ0aW1lc3RhbXAiOiIyMDE2LTA0LTEyVDEyOjI2OjQyLjYwN1oifV0=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="85104059-365e-485f-9f83-61be42567623" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;bd9ca292807823257bf6febe7c7a76ae&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="52166f3a-0ee8-445c-8ee9-d36fb7bc4a8e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e802fb45-051c-4c94-ae5d-f740e8485f6f" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;d247b07be05db0ae021f895fc37030ac&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="64" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="7cbbfd31-e2d0-4a3e-8c0b-25a48e0d6973" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c3f7e262-7e81-42fe-86eb-ea6ae7dac974" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;0ffc2f3287c07f62de7a7c860958117c&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="61" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="8512fb30-6a13-4b6e-88f1-a3b6b74596bf" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e059e46c-2633-4b5c-9d83-08059e7d5731" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;071ae52a0537aef3978b1d4ed65a44bc&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="9" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="8717feb1-1d87-4177-8aef-d92b8c46249e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="515ad662-84cc-4c11-9c75-79045c589a13" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;25588fa3f12946cf967247846ad860ce&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="86" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="e794c382-d404-47a9-8133-2949b72b5300" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c176c5fc-d7b4-42e8-a001-c001b18cc38d" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;c2eadadc42e23a416abd42e1322baaa3&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="85" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="692b993b-c8bc-4c2e-8b9a-a58de2321ab6" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="83840cfb-17d8-48f1-8e30-90b6246f116e" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;ec5f50ada7624fc2ceab41d29cdc4642&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="84" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="0c2a7627-5fab-459b-9b11-733143ea3ccc" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="6a10f8d8-b953-4f7f-94b8-266bd20e3267" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;0e3fd484c24c6053800811da6bfe322b&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="83" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="b6700256-e13e-4990-bcf1-12d4ec9f6c53" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b3df197d-e484-408c-a46b-8db51ca25629" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;b3ea5e97f2db608d45118a41d281dc10&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="82" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="3b6d1d44-0fe7-4d9d-864f-b9ea379de30a" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="34749f81-7c79-4d69-b3ed-c4cd0a21bceb" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;ad273c8e0fa6ce0fcff956df840b8bed&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="76" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="34fca1d9-9f99-4395-ac48-77b5bc0b7c43" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="238c8bda-d62d-473f-90d3-753a66ed3fac" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;c9d3f8bba8aa3e6e6a6f294faaf5251d&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="68" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="953fc748-84e1-4f50-b0e0-76b77d786f51" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="2f3c62ef-debb-4b0b-a312-3a356963f4ac" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;75cbfde0654af0d7c7f64b72e3fe841d&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="65" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="538e7e49-eba7-41fd-8240-3dbbc3605b2a" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8dc8f215-ed94-4588-9456-303b09059625" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;fbb249a9065c6bcab066f6039173789d&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="62" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="957a5b16-835d-49c3-8c6c-a3be3e8a23b5" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="47009c5b-4a7f-4cfa-9f72-de975480089b" Version="1.1" Url="https://staging.brightwhistle.com/whistler/v1/bw/posts/link_preview" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="If-None-Match" Value="&quot;b2c211a960d3057f5360cca3f0879b7b&quot;" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="2197" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="view" Value="control-panel" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="desktop" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="1df7920b-b807-4feb-bafa-9539c6f4f12e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="1ef2b4e5-ff9e-406a-8a42-3da5dddd5f87" Version="1.1" Url="https://staging.brightwhistle.com/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="socket_id" Value="197262.3632338" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="1de4b62e-7f06-4296-a171-eeb6f453cf25" Version="1.1" Url="https://staging.brightwhistle.com/dashboard" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;743d962a66016f617738b75f14a098d1&quot;" />
+      </Headers>
+    </Request>
+  </Items>
+</WebTest>

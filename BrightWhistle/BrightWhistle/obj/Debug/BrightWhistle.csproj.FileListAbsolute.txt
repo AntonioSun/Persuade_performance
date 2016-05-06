@@ -1,0 +1,13 @@
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\WebTests\Login.webtest
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\WebTests\AdventistDemo.webtest
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\WebTests\PiedmontDemo.webtest
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\BrightWhistle.dll
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\BrightWhistle.pdb
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\TestPlugins.dll
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\TestPlugins.pdb
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\obj\Debug\BrightWhistle.csprojResolveAssemblyReference.cache
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\obj\Debug\BrightWhistle.dll
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\obj\Debug\BrightWhistle.pdb
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\WebTests\FBCampaign.webtest
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\WebTests\FBCampaign2.webtest
+C:\Medseek\Automation\Persuade\VSProjects\BrightWhistle\BrightWhistle\bin\Debug\WebTests\sample.webtest

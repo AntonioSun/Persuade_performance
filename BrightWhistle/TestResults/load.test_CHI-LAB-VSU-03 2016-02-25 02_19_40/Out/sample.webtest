@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="sample" Id="16027100-0dba-4a22-b5ae-5ffda03980e9" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="login" />
+    <IncludedWebTest Name="Login" Path="login.webtest" Id="d18e36ac-33af-494f-93ef-6e72ae7e320d" IsCodedWebTest="False" InheritWebTestSettings="False" />
+    <Comment CommentText="set hierarchy BW&gt;Adventist OR" />
+    <TransactionTimer Name="Set hierarchy BW, Adventist OR">
+      <Items>
+        <Request Method="GET" Guid="09d1099e-6968-46c6-b4f5-deab8c83e2ac" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;d864b798d9829ced49cee4a80060478b&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="8fa7280c-0cd8-4320-be7f-77dff87fa0ad" Version="1.1" Url="{{UIServerUrl}}/assets/logo-persuade-main-73fd955e1df46b9ad3a64584d2e8e183.svg" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="If-None-Match" Value="&quot;70be-2414-51d488f6bb90c&quot;" />
+            <Header Name="If-Modified-Since" Value="Fri, 14 Aug 2015 17:12:44 GMT" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="10a30eca-c326-4702-861c-43701696026e" Version="1.1" Url="{{UIServerUrl}}/assets/bwiconfont-webfont-8ce0ac865a7bb99e8df799ad65d093f7.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="If-None-Match" Value="&quot;7e7c-6b24-51d488f6b99cc&quot;" />
+            <Header Name="If-Modified-Since" Value="Fri, 14 Aug 2015 17:12:44 GMT" />
+          </Headers>
+        </Request>
+        <Request Method="POST" Guid="c21cca88-9edf-40a5-96cb-334ecfe05bbd" Version="1.1" Url="{{UIServerUrl}}/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="Origin" Value="{{UIServerUrl}}" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="socket_id" Value="62249.3449923" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="ada20d29-e69d-4335-9f3d-b8ca2964b7ea" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="If-None-Match" Value="&quot;26d4d63c76c035cc2382f50005fa1f78&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="4dff3b5a-f6cf-46f4-86e3-f8a7a884c52c" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="pl" Value="1440449055476" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtVVRcKW1dSRlUeX05RQ0INB04=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="ap" Value="1996" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="be" Value="2228" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="fe" Value="2031" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="dc" Value="949" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1440449055476,&quot;n&quot;:0,&quot;u&quot;:2194,&quot;ue&quot;:2196,&quot;dl&quot;:2212,&quot;di&quot;:3174,&quot;ds&quot;:3174,&quot;de&quot;:3836,&quot;dc&quot;:4256,&quot;l&quot;:4256,&quot;le&quot;:4271,&quot;f&quot;:0,&quot;dn&quot;:0,&quot;dne&quot;:0,&quot;c&quot;:0,&quot;ce&quot;:0,&quot;rq&quot;:7,&quot;rp&quot;:2191,&quot;rpe&quot;:2196},&quot;navigation&quot;:{&quot;ty&quot;:1}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="facebook control panel" />
+    <TransactionTimer Name="Facebook Control Panel">
+      <Items>
+        <Request Method="GET" Guid="36a16fce-1fc4-4daf-b8f1-2cc6ba419038" Version="1.1" Url="{{UIServerUrl}}/facebook/control_panel" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;ecf012ef56ee1bed06c0b04a2f1e34b6&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="POST" Guid="381b1a7f-8e33-4199-9ffe-71a26e91ce44" Version="1.1" Url="{{UIServerUrl}}/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="Origin" Value="{{UIServerUrl}}" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="socket_id" Value="62275.3435299" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="038d90fe-b5a8-42ce-8d70-22f20c19f086" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="If-None-Match" Value="&quot;eaf0988e527d4fd5dea96aa56a5fe7db&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="af73914e-a82f-4b38-80a2-63a25895b9fa" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="pl" Value="1440449132454" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtSWwoWS1dfa0FQXl1YHl0KBlxA" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="ap" Value="747" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="be" Value="963" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="fe" Value="1624" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="dc" Value="627" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1440449132454,&quot;n&quot;:0,&quot;u&quot;:916,&quot;ue&quot;:918,&quot;dl&quot;:937,&quot;di&quot;:1579,&quot;ds&quot;:1579,&quot;de&quot;:2145,&quot;dc&quot;:2575,&quot;l&quot;:2575,&quot;le&quot;:2595,&quot;f&quot;:0,&quot;dn&quot;:0,&quot;dne&quot;:0,&quot;c&quot;:6,&quot;ce&quot;:45,&quot;s&quot;:43,&quot;rq&quot;:45,&quot;rp&quot;:913,&quot;rpe&quot;:918},&quot;navigation&quot;:{}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="set hierarchy to heart risk assessment" />
+    <TransactionTimer Name="Hierarchy - Heart Risk Assessment">
+      <Items>
+        <Request Method="GET" Guid="0bece39e-65a5-417f-a410-4db2e2f0b451" Version="1.1" Url="{{UIServerUrl}}/facebook/control_panel/3050" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+            <Header Name="If-None-Match" Value="&quot;76ae5837d37f5665721ec2b5a46cec3e&quot;" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="9798d205-71cc-41ca-b0a6-db969a012932" Version="1.1" Url="{{UIServerUrl}}/whistler/v1/bw/access/check_object.json" ThinkTime="6" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="m" Value="lead" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="i" Value="776708" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Reports Medicom" />
+    <TransactionTimer Name="Reports Medicom">
+      <Items>
+        <Request Method="GET" Guid="079c65dd-ce80-4ff9-a121-01f1867fc61c" Version="1.1" Url="{{UIServerUrl}}/reports/19" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;1218a55782bc0fe053e9e4bdb74dd4e9&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="POST" Guid="fbc08515-e185-4823-bbef-a581c400e56d" Version="1.1" Url="{{UIServerUrl}}/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="Origin" Value="{{UIServerUrl}}" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="socket_id" Value="62272.3437638" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="4d22e41e-8da7-40a5-8650-6380c43dc83f" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="If-None-Match" Value="&quot;bfd2baa77a0aaecc4477eb455da136c9&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="b83d22e1-74d6-46d9-a55e-0662436b7368" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="pl" Value="1440449249693" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtDURQNS0xAG0JZX08=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="ap" Value="2137" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="be" Value="2356" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="fe" Value="1425" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="dc" Value="496" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1440449249693,&quot;n&quot;:0,&quot;u&quot;:2310,&quot;ue&quot;:2311,&quot;dl&quot;:2329,&quot;di&quot;:2837,&quot;ds&quot;:2837,&quot;de&quot;:3332,&quot;dc&quot;:3765,&quot;l&quot;:3765,&quot;le&quot;:3781,&quot;f&quot;:0,&quot;dn&quot;:0,&quot;dne&quot;:0,&quot;c&quot;:0,&quot;ce&quot;:0,&quot;rq&quot;:6,&quot;rp&quot;:2307,&quot;rpe&quot;:2311},&quot;navigation&quot;:{}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Timeframe: past 6 months" />
+    <TransactionTimer Name="Timeframe - Past 6 months">
+      <Items>
+        <Request Method="GET" Guid="13b4e7f7-df0f-40ff-8255-0278600af680" Version="1.1" Url="{{UIServerUrl}}/reports/19" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="s" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[force]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="Last 6 months" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="02/01/2015 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="08/24/2015 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="click completed leads" />
+    <TransactionTimer Name="Completed Leads">
+      <Items>
+        <Request Method="GET" Guid="42d8ffa4-3590-4265-96ea-de80ac19baf3" Version="1.1" Url="{{UIServerUrl}}/leads" ThinkTime="-3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="date_type" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="3050" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="02/01/2015 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[primary_risk]" Value="Completed" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="08/24/2015 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="Custom" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="POST" Guid="9232abf0-ff4e-4ed0-8283-6eebf620429d" Version="1.1" Url="{{UIServerUrl}}/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="Origin" Value="{{UIServerUrl}}" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="socket_id" Value="62244.3455949" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="7b0a7e4d-b350-4084-955c-b2177dbbdf13" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="If-None-Match" Value="&quot;4a7faeee83423f995a17280b58afd5bd&quot;" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="Toggle PHI">
+      <Items>
+        <Request Method="GET" Guid="6672cb5c-780e-4a1d-a1f1-be38b49a0f9e" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="pl" Value="1440449362597" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtdUQUGShdaWlVUSA==" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="ap" Value="4162" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="be" Value="4439" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="fe" Value="3298" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="dc" Value="1194" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1440449362597,&quot;n&quot;:0,&quot;u&quot;:4422,&quot;ue&quot;:4424,&quot;dl&quot;:4444,&quot;di&quot;:5648,&quot;ds&quot;:5648,&quot;de&quot;:7350,&quot;dc&quot;:7752,&quot;l&quot;:7752,&quot;le&quot;:7768,&quot;f&quot;:0,&quot;dn&quot;:0,&quot;dne&quot;:0,&quot;c&quot;:0,&quot;ce&quot;:0,&quot;rq&quot;:10,&quot;rp&quot;:4418,&quot;rpe&quot;:4904},&quot;navigation&quot;:{}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="c4a4caa6-fbba-43a1-be3d-945dc6ad4f30" Version="1.1" Url="{{UIServerUrl}}/leads" ThinkTime="-3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="direction" Value="desc" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phi]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="filter" Value="all" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_comments]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phone_leads]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="3050" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[mobile_or_desktop]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[is_risk_assessment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[primary_risk]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[service_line]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="date_type" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="Custom" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="02/01/2015 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="08/24/2015 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[comment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[first_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[last_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[date_of_birth]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[identifier]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[caller_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ssn]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[phone_number]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[email]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_fields]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[city]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[state]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[zip]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_type]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[source_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[next_activity_date]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_from]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_to]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_value]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_source]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_medium]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_term]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_content]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_campaign]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[matchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[network]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[creative]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[keyword]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[placement]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[target]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[random]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[aceid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adposition]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[querystring]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bidmatchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[orderitemid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifmobile]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifsearch]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifcontent]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_ad_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_post_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bw_campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="16b8701c-c904-4757-8da0-3fdf5bb9596f" Version="1.1" Url="{{UIServerUrl}}/leads" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="direction" Value="desc" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phi]" Value="false" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="filter" Value="all" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_comments]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phone_leads]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="3050" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[mobile_or_desktop]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[is_risk_assessment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[primary_risk]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[service_line]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="date_type" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="Custom" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="02/01/2015 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="08/24/2015 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[comment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[first_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[last_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[date_of_birth]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[identifier]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[caller_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ssn]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[phone_number]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[email]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_fields]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[city]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[state]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[zip]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_type]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[source_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[next_activity_date]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_from]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_to]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_value]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_source]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_medium]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_term]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_content]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_campaign]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[matchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[network]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[creative]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[keyword]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[placement]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[target]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[random]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[aceid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adposition]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[querystring]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bidmatchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[orderitemid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifmobile]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifsearch]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifcontent]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_ad_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_post_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bw_campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="b75fda44-479b-4b06-a004-8502e2018b7f" Version="1.1" Url="{{UIServerUrl}}/leads" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="direction" Value="desc" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phi]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="filter" Value="all" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_comments]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phone_leads]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="3050" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[mobile_or_desktop]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[is_risk_assessment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[primary_risk]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[service_line]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="date_type" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="Custom" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="02/01/2015 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="08/24/2015 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[comment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[first_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[last_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[date_of_birth]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[identifier]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[caller_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ssn]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[phone_number]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[email]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_fields]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[city]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[state]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[zip]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_type]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[source_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[next_activity_date]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_from]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_to]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_value]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_source]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_medium]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_term]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_content]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_campaign]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[matchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[network]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[creative]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[keyword]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[placement]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[target]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[random]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[aceid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adposition]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[querystring]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bidmatchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[orderitemid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifmobile]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifsearch]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifcontent]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_ad_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_post_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bw_campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="6323402d-7acb-46ed-ad66-4ac602b5831d" Version="1.1" Url="{{UIServerUrl}}/leads" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="direction" Value="desc" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="sort" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="per_page" Value="50" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="utf8" Value="?" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phi]" Value="false" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="filter" Value="all" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_comments]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[skip_phone_leads]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="3050" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[mobile_or_desktop]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[is_risk_assessment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[primary_risk]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[service_line]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="date_type" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="Custom" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="02/01/2015 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="08/24/2015 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[comment]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[first_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[last_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[date_of_birth]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[identifier]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[caller_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ssn]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[phone_number]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[email]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_fields]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[street_2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[city]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[state]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[zip]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[lead_type]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[source_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[next_activity_date]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_from]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[call_duration_to]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[additional_form_field_value]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_name]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_source]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_medium]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_term]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_content]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[utm_campaign]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[matchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[network]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[creative]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[keyword]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[placement]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[target]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param1]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[param2]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[random]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[aceid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adposition]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[querystring]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bidmatchtype]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[orderitemid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[adid]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifmobile]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifsearch]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[ifcontent]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_ad_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[fb_post_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[bw_campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Comment CommentText="toggled 4 times" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="click persuade go back to dashboard" />
+    <TransactionTimer Name="Persuade Logo - Return to Dashboard">
+      <Items>
+        <Request Method="GET" Guid="66453ba1-9e3b-48b2-a8e1-acbcb8a7858c" Version="1.1" Url="{{UIServerUrl}}/whistler/v1/bw/access/check_object.json" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="VKVExg977IHVzLxdf3fYkc5JLoAgGESTEMy+kv+vEcE=" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="m" Value="lead" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="i" Value="776716" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="2177869b-088e-46e7-ba38-07666e4ea83e" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;3d8eaceb4a717db98257ecc5cda6038e&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="POST" Guid="6319d519-2e7f-4325-97c6-046870f96727" Version="1.1" Url="{{UIServerUrl}}/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="Origin" Value="{{UIServerUrl}}" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="socket_id" Value="62254.3457080" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Guid="1fa8db3d-5e83-40f2-8e6f-3e2e64ca61c7" Version="1.1" Url="{{UIServerUrl}}/dashboard" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="If-None-Match" Value="&quot;b6ed4b63fd41fc0aaad0f2dab5b0d687&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="ba4cb606-28ba-4abd-8273-9bff2984a6f4" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="pl" Value="1440449471701" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtVVRcKW1dSRlUeX05RQ0INB04=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="ap" Value="1858" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="be" Value="2133" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="fe" Value="1681" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="dc" Value="550" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1440449471701,&quot;n&quot;:0,&quot;u&quot;:2063,&quot;ue&quot;:2065,&quot;dl&quot;:2101,&quot;di&quot;:2696,&quot;ds&quot;:2696,&quot;de&quot;:3243,&quot;dc&quot;:3826,&quot;l&quot;:3826,&quot;le&quot;:3844,&quot;f&quot;:0,&quot;dn&quot;:0,&quot;dne&quot;:0,&quot;c&quot;:0,&quot;ce&quot;:0,&quot;rq&quot;:11,&quot;rp&quot;:2059,&quot;rpe&quot;:2065},&quot;navigation&quot;:{}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Comment CommentText="click persuade icon return to dashboard" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <Request Method="GET" Guid="3d3f463e-a267-448e-9214-d7992d01b207" Version="1.1" Url="{{UIServerUrl}}/sign_out" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="b27b73a5-3cf7-4544-89e4-2c315dcda32c" Version="1.1" Url="https://bam.nr-data.net/1/67c3532088" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <QueryStringParameters>
+            <QueryStringParameter Name="a" Value="251357" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="pl" Value="1440449516384" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="v" Value="686.b365e66" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="to" Value="Jw1XTEFbXV1VShtERwEQShdAUUJCWVdaQhsKB04=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="ap" Value="48" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="be" Value="1549" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="fe" Value="560" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="dc" Value="400" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="f" Value="[&quot;err&quot;,&quot;xhr&quot;,&quot;stn&quot;,&quot;ins&quot;]" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="perf" Value="{&quot;timing&quot;:{&quot;of&quot;:1440449516384,&quot;n&quot;:0,&quot;u&quot;:1522,&quot;ue&quot;:1525,&quot;dl&quot;:1540,&quot;di&quot;:1949,&quot;ds&quot;:1949,&quot;de&quot;:2048,&quot;dc&quot;:2108,&quot;l&quot;:2108,&quot;le&quot;:2110,&quot;r&quot;:0,&quot;re&quot;:1381,&quot;f&quot;:1381,&quot;dn&quot;:1381,&quot;dne&quot;:1381,&quot;c&quot;:1381,&quot;ce&quot;:1381,&quot;rq&quot;:1385,&quot;rp&quot;:1520,&quot;rpe&quot;:1521},&quot;navigation&quot;:{&quot;rc&quot;:1}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="jsonp" Value="NREUM.setToken" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+</WebTest>

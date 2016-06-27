@@ -45,11 +45,26 @@ C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformanc
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\obj\Debug\PersuadePerformance.csprojResolveAssemblyReference.cache
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\obj\Debug\PersuadePerformance.dll
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\obj\Debug\PersuadePerformance.pdb
-C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\Presence.webtest
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\test.webtest
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\Nurture Campaign.webtest
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\Nurture List.webtest
-C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\PERS-1694_ControlPanel.webtest
-C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\PERS-1694_Test2.webtest
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1677_GoogleControlPanel.webtest
-C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\convpix.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\PERS-1675_FBConvpix.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\PERS-1665_PresenceManager.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Nurture\PERS-1694_NurtureControlPanel.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\gStats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\stats.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Directory Management\PERS-1664_Employees.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Directory Management\PERS-1663_Locations.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1680_GoogleBudgets.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Google\PERS-1682_GoogleCriteria.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\context1.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Global Tests\stcongoogle.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Presence\PERS-1671_Presence.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_Reports.loadtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_Library.loadtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_PresenceAndNurture.loadtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_StatsFacebookULM.loadtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_Google.loadtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\camp.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\monthlyLeads.webtest

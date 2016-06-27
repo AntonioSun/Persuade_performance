@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="gStats" Id="d970154e-c97f-44d2-8df1-f2f89b25caff" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Login" />
+    <TransactionTimer Name="Login">
+      <Items>
+        <Request Method="GET" Guid="2f67eb3a-6065-446c-8768-b2027a7cdca5" Version="1.1" Url="{{ServerUrl}}/" ThinkTime="0" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;202ef1e9e7b2d8cac9844e5b71e49b54&quot;" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+        <Request Method="POST" Guid="9c4e6aca-40e6-4454-ac34-febd66b1a241" Version="1.1" Url="{{ServerUrl}}/sign_in" ThinkTime="5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Origin" Value="{{ServerUrl}}" />
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="authToken" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
+              <RuleParameters>
+                <RuleParameter Name="TagName" Value="meta" />
+                <RuleParameter Name="AttributeName" Value="content" />
+                <RuleParameter Name="MatchAttributeName" Value="name" />
+                <RuleParameter Name="MatchAttributeValue" Value="csrf-token" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="authenticity_token" Value="{{$HIDDEN1.authenticity_token}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="window_resolution" Value="1349x663" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="user[email]" Value="{{Users.Users#csv.Username}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="user[password]" Value="{{Users.Users#csv.Password}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="commit" Value="Sign in" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Set Hierarchy" />
+    <TransactionTimer Name="Set Hierarchy">
+      <Items>
+        <Request Method="PUT" Guid="84f273be-3c35-4d92-bc7d-8da847638805" Version="1.1" Url="{{ServerUrl}}/context.html" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="Origin" Value="{{ServerUrl}}" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="context[agency_id]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="context[client_id]" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Stats" />
+    <TransactionTimer Name="Stats">
+      <Items>
+        <Request Method="GET" Guid="c6f47d91-f829-418d-87d0-f4ac2db2ed95" Version="1.1" Url="{{ServerUrl}}/google/stats/campaign" ThinkTime="-9" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+            <Header Name="If-None-Match" Value="&quot;f3882ac6b4e0b429bd3f4436f2d96945&quot;" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="fea05ebc-e5fa-4531-8e49-574a55ae0f87" Version="1.1" Url="{{ServerUrl}}/google/graph_stats/campaign" ThinkTime="-3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="If-None-Match" Value="&quot;c87e0be0b0573f34d827b95b442d9ecf&quot;" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="statable_ids[]" Value="3040" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3690" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3689" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3041" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3039" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3691" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3686" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3687" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3036" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3688" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3258" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3029" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="a16a6f3c-f7dd-4a43-8105-27044195375c" Version="1.1" Url="{{ServerUrl}}/google/macro_stats/campaign" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="If-None-Match" Value="&quot;60f15c65c60d1dcf4d3162d727132b49&quot;" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="statable_ids[]" Value="3040" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3690" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3689" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3041" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3039" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3691" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3686" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3687" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3036" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3688" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3258" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3029" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Select Campaign and Click Arrow" />
+    <TransactionTimer Name="Select Campaign and Click Arrow">
+      <Items>
+        <Request Method="GET" Guid="35baea97-a798-482b-9745-8fdb130c5f5f" Version="1.1" Url="{{ServerUrl}}/google/macro_stats/campaign" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="statable_ids[]" Value="3689" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="1a1b566d-af8e-4b2b-ac77-0c3d5cfaf7ad" Version="1.1" Url="{{ServerUrl}}/google/daily_stats/campaign" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="statable_id" Value="3689" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Tier3" />
+    <TransactionTimer Name="Tier3">
+      <Items>
+        <Request Method="GET" Guid="794d8ff5-9d51-4d0e-8a13-3653d5e7b226" Version="1.1" Url="{{ServerUrl}}/Google/stats/BusinessUnit/cl3" ThinkTime="-13" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="dc2ac0d4-a91f-4f52-a1ee-f82a0f1ac9df" Version="1.1" Url="{{ServerUrl}}/Google/graph_stats/BusinessUnit/cl3" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2863" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="227" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2864" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2768" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2847" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2898" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2901" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2904" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2905" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2908" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2913" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2924" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2926" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2934" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2964" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2969" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2977" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2978" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2991" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2999" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3078" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3630" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3744" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3833" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="3015b432-8cf6-4d41-bd5e-a47b1866e782" Version="1.1" Url="{{ServerUrl}}/Google/macro_stats/BusinessUnit/cl3" ThinkTime="-2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2863" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="227" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2864" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2768" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2847" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2898" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2901" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2904" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2905" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2908" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2913" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2924" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2926" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2934" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2964" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2969" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2977" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2978" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2991" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2999" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3078" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3630" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3744" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3833" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3924" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3930" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="3931" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Select Tier 3 and Click Arrow" />
+    <TransactionTimer Name="Select Tier3 and Click Arrow">
+      <Items>
+        <Request Method="GET" Guid="4ef892bf-039f-4441-b52b-b4a54888e5b3" Version="1.1" Url="{{ServerUrl}}/Google/macro_stats/BusinessUnit/cl3" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2863" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="ec6bb3e1-7a45-4221-b373-7b8907b0a185" Version="1.1" Url="{{ServerUrl}}/Google/daily_stats/BusinessUnit/cl3" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_id" Value="2863" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Ad Groups" />
+    <TransactionTimer Name="Ad Groups">
+      <Items>
+        <Request Method="GET" Guid="6f89a0a9-c391-4a13-868b-8bb3da795741" Version="1.1" Url="{{ServerUrl}}/Google/stats/AdGroup/cl3" ThinkTime="-22" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="b58b6e05-90e1-415f-ab90-083ea80488cf" Version="1.1" Url="{{ServerUrl}}/Google/graph_stats/AdGroup/cl3" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1869" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="321" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2445" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2438" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2457" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2458" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="317" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2436" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2460" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="326" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2453" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="322" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2466" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="331" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="300" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1863" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="324" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="345" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2444" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="316" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="305" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4366" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4519" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2459" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4367" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="2e6ae231-2532-4f73-a987-6442ba2f5399" Version="1.1" Url="{{ServerUrl}}/Google/macro_stats/AdGroup/cl3" ThinkTime="-1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1869" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="321" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2445" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2438" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2457" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2458" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="317" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2436" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2460" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="326" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2453" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="322" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2466" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="331" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="300" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1863" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="324" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="345" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2444" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="316" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="305" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4366" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4519" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2459" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4367" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4368" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="228" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2467" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2451" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="319" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1867" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2450" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1868" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="234" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2437" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2452" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="223" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="230" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="232" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="215" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="221" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="226" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="301" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="320" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="334" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="350" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1862" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1865" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="1866" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2433" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2434" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2435" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2439" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2440" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2441" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2442" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2447" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2454" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2455" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2456" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2461" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2462" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2463" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2464" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="2465" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="4527" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="13636" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="13650" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="16552" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Select Ad Group and Click Arrow" />
+    <TransactionTimer Name="Select Ad Group and Click Arrow">
+      <Items>
+        <Request Method="GET" Guid="3de289fc-8858-4ad9-9055-59c56e04c996" Version="1.1" Url="{{ServerUrl}}/Google/macro_stats/AdGroup/cl3" ThinkTime="-5" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="321" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="24bb2743-c5c5-4f6b-ba8a-8d889b60513d" Version="1.1" Url="{{ServerUrl}}/Google/daily_stats/AdGroup/cl3" ThinkTime="-6" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_id" Value="321" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Ads" />
+    <TransactionTimer Name="Ads">
+      <Items>
+        <Request Method="GET" Guid="91c6432f-0423-49f4-b53c-aaa23c2d3b41" Version="1.1" Url="{{ServerUrl}}/Google/stats/GoogleAd/cl3" ThinkTime="-50" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+            <Header Name="X-PJAX" Value="true" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="5c9cb6b5-dff5-497f-a2c8-656c181311f8" Version="1.1" Url="{{ServerUrl}}/Google/graph_stats/GoogleAd/cl3" ThinkTime="-11" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6997" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6972" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6986" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7040" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7080" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7083" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="9407" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="13954" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6993" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6911" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6992" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="12336" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7076" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7091" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6917" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6976" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7037" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6916" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6935" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="12345" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6940" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7110" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6960" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="6957" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="13297" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="4ec5171c-2c80-42ad-aefd-12372cce733d" Version="1.1" Url="{{ServerUrl}}/Google/macro_stats/GoogleAd/cl3" ThinkTime="-11" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7080" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Select Ad and Click Arrow" />
+    <TransactionTimer Name="Select Ad and Click Arrow">
+      <Items>
+        <Request Method="GET" Guid="4ec5171c-2c80-42ad-aefd-12372cce733d" Version="1.1" Url="{{ServerUrl}}/Google/macro_stats/GoogleAd/cl3" ThinkTime="-11" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_ids[]" Value="7080" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="a018e438-3dea-45c6-a25b-422fef5af237" Version="1.1" Url="{{ServerUrl}}/Google/daily_stats/GoogleAd/cl3" ThinkTime="-12" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+            <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+            <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="statable_id" Value="7080" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Keyword" />
+    <Request Method="GET" Guid="6bd8a06c-68cb-4878-b99c-737e173ad047" Version="1.1" Url="{{ServerUrl}}/Google/stats/Keyword/cl3" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-NewRelic-ID" Value="VQQGWVNSGwEFVVJXAA==" />
+        <Header Name="X-CSRF-Token" Value="{{authToken}}" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="X-PJAX" Value="true" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="per_page" Value="25" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="parameters[start_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="parameters[end_at]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <Request Method="GET" Guid="4ef99a10-1934-4a6a-a92d-f55778cf82d9" Version="1.1" Url="{{ServerUrl}}/sign_out" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="7d660ecf-06d9-46b2-bd26-26a63c68c537" Version="1.1" Url="{{ServerUrl}}/sign_in" ThinkTime="0" Timeout="60" ParseDependentRequests="False" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <DataSources>
+    <DataSource Name="Users" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\..\..\Data\Users.csv">
+      <Tables>
+        <DataSourceTable Name="Users#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://console.brightwhistle.com" />
+  </ContextParameters>
+</WebTest>

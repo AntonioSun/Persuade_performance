@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="Reviews" Id="c7c58060-0b49-4274-baf4-2e505dabce7d" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+<WebTest Name="PERS-1661_Reviwes" Id="c7c58060-0b49-4274-baf4-2e505dabce7d" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
     <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
-      <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
-      </Items>
-    </TransactionTimer>
+    <TransactionTimer Name="Login" />
     <Comment CommentText="Set Hierarchy" />
     <TransactionTimer Name="Set Hierarchy">
       <Items>

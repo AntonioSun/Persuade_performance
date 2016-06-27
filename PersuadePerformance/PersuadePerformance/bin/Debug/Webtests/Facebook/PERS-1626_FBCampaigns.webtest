@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="PERS-1626" Id="d7a216ba-dd89-476f-8319-d7def216508b" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+<WebTest Name="PERS-1626_FBCampaigns" Id="d7a216ba-dd89-476f-8319-d7def216508b" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
-    <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
-      <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
-      </Items>
-    </TransactionTimer>
     <Comment CommentText="Set Hierarchy" />
     <TransactionTimer Name="Set Hierarchy">
       <Items>
@@ -20,6 +14,16 @@
           <Headers>
             <Header Name="Upgrade-Insecure-Requests" Value="1" />
           </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Campaigns" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
         </Request>
       </Items>
     </TransactionTimer>
@@ -31,6 +35,16 @@
             <Header Name="X-CSRF-Token" Value="{{authToken}}" />
             <Header Name="X-Requested-With" Value="XMLHttpRequest" />
           </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="New Campaign" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
           <QueryStringParameters>
             <QueryStringParameter Name="account_type" Value="Facebook" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
           </QueryStringParameters>
@@ -45,6 +59,16 @@
             <Header Name="X-CSRF-Token" Value="{{authToken}}" />
             <Header Name="X-Requested-With" Value="XMLHttpRequest" />
           </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Select Targeting Template" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
           <ExtractionRules>
             <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="reachEstimate" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
               <RuleParameters>
@@ -59,17 +83,15 @@
                 <RuleParameter Name="SearchInHeaders" Value="False" />
               </RuleParameters>
             </ExtractionRule>
-            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="targetingProfileId" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="targetingProfileId" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
               <RuleParameters>
-                <RuleParameter Name="StartsWith" Value="Akron (" />
-                <RuleParameter Name="EndsWith" Value=") Alabama" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="Required" Value="True" />
-                <RuleParameter Name="ExtractRandomMatch" Value="False" />
-                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="TagName" Value="input" />
+                <RuleParameter Name="AttributeName" Value="value" />
+                <RuleParameter Name="MatchAttributeName" Value="class" />
+                <RuleParameter Name="MatchAttributeValue" Value="grid-item-input" />
                 <RuleParameter Name="HtmlDecode" Value="True" />
-                <RuleParameter Name="SearchInHeaders" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
               </RuleParameters>
             </ExtractionRule>
           </ExtractionRules>
@@ -82,6 +104,16 @@
             <Header Name="X-CSRF-Token" Value="{{authToken}}" />
             <Header Name="X-Requested-With" Value="XMLHttpRequest" />
           </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Location - Living In" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
           <QueryStringParameters>
             <QueryStringParameter Name="id" Value="{{targetingProfileId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="business_unit_id" Value="{{FacebookHierarchy.FacebookHierarchy#csv.Tier3Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
@@ -136,16 +168,6 @@
             <Header Name="X-Requested-With" Value="XMLHttpRequest" />
             <Header Name="X-PJAX" Value="true" />
           </Headers>
-          <ValidationRules>
-            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
-              <RuleParameters>
-                <RuleParameter Name="FindText" Value="perfFbCampaign{{seedNumber}}" />
-                <RuleParameter Name="IgnoreCase" Value="False" />
-                <RuleParameter Name="UseRegularExpression" Value="False" />
-                <RuleParameter Name="PassIfTextFound" Value="True" />
-              </RuleParameters>
-            </ValidationRule>
-          </ValidationRules>
           <QueryStringParameters>
             <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
           </QueryStringParameters>

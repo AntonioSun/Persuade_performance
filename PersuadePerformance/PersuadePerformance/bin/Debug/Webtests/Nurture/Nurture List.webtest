@@ -2,11 +2,7 @@
 <WebTest Name="Nurture List" Id="d7711367-18f3-46de-b60d-c613146cd3f9" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
     <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
-      <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
-      </Items>
-    </TransactionTimer>
+    <TransactionTimer Name="Login" />
     <Comment CommentText="Hierarchy" />
     <TransactionTimer Name="Hierarchy">
       <Items>

@@ -54,18 +54,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stcongoogleCoded.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Campaigns.csv" />
+    <None Include="Data\Channel.csv" />
+    <None Include="Data\LeadTypes.csv" />
     <None Include="Data\UserId.csv" />
     <None Include="Data\GoogleHierarchy.csv" />
     <None Include="Data\Hierarchy.csv" />
     <None Include="Data\FacebookHierarchy.csv" />
     <None Include="Data\Users.csv" />
+    <None Include="LoadTests\Persuade_Google.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTests\Persuade_Reports.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTests\Persuade_Library.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTests\Persuade_PresenceAndNurture.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTests\Persuade_StatsFacebookULM.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="LoadTests\Persuade.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Webtests\Facebook\convpix.webtest">
+    <None Include="Webtests\Facebook\camp.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Facebook\PERS-1627_FBStats.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Facebook\PERS-1675_FBConvpix.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Facebook\PERS-1674_FBControlPanel.webtest" />
@@ -75,13 +99,25 @@
     <None Include="Webtests\Facebook\PERS-1626_FBCampaigns.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Webtests\Facebook\PERS-1627_FBStats.webtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Webtests\Facebook\PERS-1673_FBSnapShot.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Facebook\PERS-1628_Targeting.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Global Tests\context1.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Global Tests\stcongoogle.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Google\PERS-1680_GoogleBudgets.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Google\PERS-1682_GoogleCriteria.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Google\gStats.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Google\PERS-1677_GoogleControlPanel.webtest">
@@ -94,10 +130,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Google\PERS-1679_GoogleAdGroups.webtest" />
+    <None Include="Webtests\Google\stats.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Webtests\Library\PERS-1658_Creative.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Webtests\Nurture\PERS-1694_ControlPanel.webtest">
+    <None Include="Webtests\Nurture\PERS-1694_NurtureControlPanel.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Nurture\Nurture Campaign.webtest">
@@ -106,8 +145,7 @@
     <None Include="Webtests\Nurture\Nurture List.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Webtests\Nurture\PERS-1694_Test.webtest" />
-    <None Include="Webtests\Nurture\PERS-1694_Test2.webtest">
+    <None Include="Webtests\Presence\PERS-1665_PresenceManager.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Presence\PERS-1666_Pages.webtest">
@@ -116,10 +154,13 @@
     <None Include="Webtests\Presence\PERS-1667_Tabs.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Webtests\Presence\Presence.webtest">
+    <None Include="Webtests\Presence\PERS-1671_Presence.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Presence\test.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Reports\monthlyLeads.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Reports\PERS-1687_GoogleAdWords.webtest">
@@ -179,6 +220,12 @@
     <None Include="Webtests\Reports\PERS-1691_MonthlyLeads.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Webtests\Directory Management\PERS-1664_Employees.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Webtests\Directory Management\PERS-1663_Locations.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Webtests\ULM\PERS-1733_AI.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -207,7 +254,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Webtests\Scenarios\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestPlugin\TestPlugin.csproj">
       <Project>{41233aa9-f768-427f-9b78-0ffab4966668}</Project>

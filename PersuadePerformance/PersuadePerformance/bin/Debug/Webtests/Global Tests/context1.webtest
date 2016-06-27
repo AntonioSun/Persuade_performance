@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="context1" Id="45b4e988-3ceb-46dd-a45b-0b7ffc65968f" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="87823db3-25f6-4781-827f-35c305e6b765" Version="1.1" Url="http://www.telerik.com/UpdateCheck.aspx" ThinkTime="7" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Pragma" Value="no-cache" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="isBeta" Value="False" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="PUT" Guid="cdce5fae-d3d1-4ffa-a714-40c57a6c98e3" Version="1.1" Url="https://staging.brightwhistle.com/context.html" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="X-CSRF-Token" Value="hFFh+KaT+EbdLaPjPjpKdnE79dhUsxmu9wEfA4TGEec=" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="context[agency_id]" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="context[client_id]" Value="13" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="d0f9cbcb-e123-417e-8bcf-511289bfcd73" Version="1.1" Url="https://s.youtube.com/api/stats/watchtime?euri" ThinkTime="4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ns" Value="yt" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="el" Value="detailpage" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cpn" Value="78Y9okolvl1Kkl3m" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="docid" Value="UAWcs5H-qgQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ver" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="referrer" Value="https://www.youtube.com/watch?v=FOjdXSrtUxA" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cmt" Value="268.251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="plid" Value="AAUzMF0T8SwgrDtV" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ei" Value="4KQ9V576G420oAPorICoDg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fmt" Value="244" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fs" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="rt" Value="268.535" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="of" Value="BOD2p0rQC_d_DGiFYPexVg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="lact" Value="248193" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cl" Value="122687037" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="state" Value="playing" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vm" Value="CAIQAQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="c" Value="WEB" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cver" Value="1.20160512" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cplayer" Value="UNIPLAYER" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbr" Value="Chrome" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbrver" Value="49.0.2623.112" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cos" Value="Windows" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cosver" Value="6.1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="autonav" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="autoplay" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="delay" Value="4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="hl" Value="en_GB" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cr" Value="IN" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uga" Value="f27" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="len" Value="289.561" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="rtn" Value="308" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="feature" Value="related-auto" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="afmt" Value="251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="idpj" Value="-6" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ldpj" Value="-3" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="rti" Value="268" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="st" Value="228.268" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="et" Value="268.251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vis" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="a5f4e2d6-c8a3-46ec-b3b4-5589115498cc" Version="1.1" Url="https://outlook.office.com/owa/ev.owa2" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://outlook.office.com" />
+        <Header Name="X-OWA-CANARY" Value="mnfNZDkriUe01DmKqAJivEAPVTfZf9MYNB71xgKvPCTaLmpB5jNd6IdFlp7Vig-vWJgmk0M6d5w." />
+        <Header Name="Content-Type" Value="text/plain;charset=UTF-8" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ns" Value="PendingRequest" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ev" Value="FinishNotificationRequest" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="UA" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cid" Value="d91c208c-d699-4763-a1c2-3cb6ff262f33" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="8d1e73e9-471e-4f5a-a8b2-a4af44da71cb" Version="1.1" Url="https://outlook.office.com/owa/ev.owa2" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://outlook.office.com" />
+        <Header Name="X-OWA-CANARY" Value="mnfNZDkriUe01DmKqAJivEAPVTfZf9MYNB71xgKvPCTaLmpB5jNd6IdFlp7Vig-vWJgmk0M6d5w." />
+        <Header Name="Content-Type" Value="text/plain;charset=UTF-8" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ns" Value="PendingRequest" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ev" Value="FinishNotificationRequest" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="UA" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cid" Value="d91c208c-d699-4763-a1c2-3cb6ff262f33" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="cfb3ff06-9860-4d2c-9e1e-76cdcd9fc002" Version="1.1" Url="https://outlook.office.com/owa/ev.owa2" ThinkTime="-28" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="ns" Value="PendingRequest" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ev" Value="PendingNotificationRequest" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="UA" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cid" Value="d91c208c-d699-4763-a1c2-3cb6ff262f33" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="brwnm" Value="chrome" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="X-OWA-CANARY" Value="WxtN_A_PiE6NsyxTIlT2lnDZ0D3af9MYSe6ACE-_rvkyNdMu44MzYLKQYw7RKbXjKKR_ZPggIkM." RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="n" Value="7e" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="f3eb8b4a-c6ba-4c2c-800b-231545e4ac7c" Version="1.1" Url="https://outlook.office.com/owa/service.svc" ThinkTime="2" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://outlook.office.com" />
+        <Header Name="X-UpnAnchorMailbox" Value="Madhurim@emids.com" />
+        <Header Name="X-OWA-CANARY" Value="WxtN_A_PiE6NsyxTIlT2lnDZ0D3af9MYSe6ACE-_rvkyNdMu44MzYLKQYw7RKbXjKKR_ZPggIkM." />
+        <Header Name="X-OWA-ActionId" Value="-101" />
+        <Header Name="X-OWA-UrlPostData" Value="%7B%22__type%22%3A%22FindConversationJsonRequest%3A%23Exchange%22%2C%22Header%22%3A%7B%22__type%22%3A%22JsonRequestHeaders%3A%23Exchange%22%2C%22RequestServerVersion%22%3A%22Exchange2013%22%2C%22TimeZoneContext%22%3A%7B%22__type%22%3A%22TimeZoneContext%3A%23Exchange%22%2C%22TimeZoneDefinition%22%3A%7B%22__type%22%3A%22TimeZoneDefinitionType%3A%23Exchange%22%2C%22Id%22%3A%22India%20Standard%20Time%22%7D%7D%7D%2C%22Body%22%3A%7B%22__type%22%3A%22FindConversationRequest%3A%23Exchange%22%2C%22ParentFolderId%22%3A%7B%22__type%22%3A%22TargetFolderId%3A%23Exchange%22%2C%22BaseFolderId%22%3A%7B%22__type%22%3A%22DistinguishedFolderId%3A%23Exchange%22%2C%22Id%22%3A%22inbox%22%7D%7D%2C%22ConversationShape%22%3A%7B%22__type%22%3A%22ConversationResponseShape%3A%23Exchange%22%2C%22BaseShape%22%3A%22IdOnly%22%7D%2C%22ShapeName%22%3A%22ConversationListView%22%2C%22Paging%22%3A%7B%22__type%22%3A%22IndexedPageView%3A%23Exchange%22%2C%22BasePoint%22%3A%22Beginning%22%2C%22Offset%22%3A0%2C%22MaxEntriesReturned%22%3A25%7D%2C%22ViewFilter%22%3A%22All%22%2C%22FocusedViewFilter%22%3A-1%2C%22SortOrder%22%3A%5B%7B%22__type%22%3A%22SortResults%3A%23Exchange%22%2C%22Order%22%3A%22Descending%22%2C%22Path%22%3A%7B%22__type%22%3A%22PropertyUri%3A%23Exchange%22%2C%22FieldURI%22%3A%22ConversationLastDeliveryOrRenewTime%22%7D%7D%2C%7B%22__type%22%3A%22SortResults%3A%23Exchange%22%2C%22Order%22%3A%22Descending%22%2C%22Path%22%3A%7B%22__type%22%3A%22PropertyUri%3A%23Exchange%22%2C%22FieldURI%22%3A%22ConversationLastDeliveryTime%22%7D%7D%5D%7D%7D" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Action" Value="FindConversation" />
+        <Header Name="X-OWA-ClientBegin" Value="2016-05-19T11:39:30.365" />
+        <Header Name="X-OWA-ClientBuildVersion" Value="16.1235.13.1998532" />
+        <Header Name="X-OWA-CorrelationId" Value="5CA2ECFAF8AA4EACA71781F3780E57BB_146365797036580" />
+        <Header Name="Content-Type" Value="application/json; charset=UTF-8" />
+        <Header Name="X-OWA-ActionName" Value="Browse_All" />
+        <Header Name="X-OWA-Attempt" Value="1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="action" Value="FindConversation" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="EP" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="UA" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ID" Value="-101" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="AC" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="a827f8da-fffb-455d-a5d0-52411224b26d" Version="1.1" Url="https://1-edge-chat.facebook.com/pull" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://business.facebook.com" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="channel" Value="p_100001687106058" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="seq" Value="1376" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="partition" Value="-2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientid" Value="699f7613" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cb" Value="eev" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="idle" Value="83692" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="qp" Value="y" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cap" Value="8" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="pws" Value="fresh" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="isq" Value="3274" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="msgs_recv" Value="1956" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="100001687106058" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="viewer_uid" Value="100001687106058" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sticky_token" Value="154" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sticky_pool" Value="frc3c09_chat-proxy" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="state" Value="offline" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="30ec0223-0ea3-427a-962c-dda531af75eb" Version="1.1" Url="https://staging.brightwhistle.com/dashboard" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Upgrade-Insecure-Requests" Value="1" />
+        <Header Name="If-None-Match" Value="&quot;7aa351a079e169e1bd4131f5129e6f09&quot;" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="4a70c1eb-4276-4183-a4ae-ab5e7d2824a1" Version="1.1" Url="https://staging.brightwhistle.com/assets/logo-persuade-main-c5f88d89538f16ca9c6543e95dfafdd9.svg" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="If-None-Match" Value="&quot;65a55-17f8-52ffe64bf2380&quot;" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 Apr 2016 19:42:22 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="1c5913ad-3b9f-413f-8255-4e628a69a30f" Version="1.1" Url="https://staging.brightwhistle.com/assets/bwiconfont-webfont-524878e8a2e9293ef0d81f45101a07f2.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="If-None-Match" Value="&quot;626d8-6b24-52ffe64bf2380&quot;" />
+        <Header Name="If-Modified-Since" Value="Fri, 08 Apr 2016 19:42:22 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="518a92ce-9502-42d7-94de-00c3b927422c" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+        <Header Name="If-Modified-Since" Value="Thu, 21 Apr 2016 03:17:22 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="d422ea7d-4721-4918-8e0b-dfad3210e265" Version="1.1" Url="https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzOY5mlVXtdNkpsMpKkrDXP4.woff" ThinkTime="1" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+        <Header Name="If-Modified-Since" Value="Thu, 21 Apr 2016 03:17:22 GMT" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="216dc1a0-b84e-49e6-b1bb-66eeff1117d1" Version="1.1" Url="https://ws.pusherapp.com/app/d67c9edd7d08755a60dc" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Pragma" Value="no-cache" />
+        <Header Name="Upgrade" Value="websocket" />
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="Sec-WebSocket-Version" Value="13" />
+        <Header Name="Sec-WebSocket-Key" Value="oI4KxycmouwDuwtxc/bUAQ==" />
+        <Header Name="Sec-WebSocket-Extensions" Value="permessage-deflate; client_max_window_bits" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="protocol" Value="7" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="client" Value="js" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="version" Value="2.2.4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="flash" Value="false" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="4ff1d672-1739-4efb-84ed-f94d8b66e5cb" Version="1.1" Url="https://staging.brightwhistle.com/pusher/auth" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://staging.brightwhistle.com" />
+        <Header Name="Content-Type" Value="application/x-www-form-urlencoded" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="socket_id" Value="197670.16338759" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="channel_name" Value="private-comm.admin" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="cd675f66-a78b-43cb-afe5-d82de9378868" Version="1.1" Url="https://stats.pusher.com/timeline/v2/jsonp/1" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="session" Value="NTc1OTYxNDgw" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bundle" Value="MQ==" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="key" Value="ZDY3YzllZGQ3ZDA4NzU1YTYwZGM=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="lib" Value="anM=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="version" Value="Mi4yLjQ=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="features" Value="WyJ3cyIsImZsYXNoIl0=" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="timeline" Value="W3siaW5zdGFuY2VzIjoxLCJ0aW1lc3RhbXAiOiIyMDE2LTA1LTE5VDExOjM5OjQwLjA5NloifSx7InN0YXRlIjoiY29ubmVjdGluZyIsInRpbWVzdGFtcCI6IjIwMTYtMDUtMTlUMTE6Mzk6NDAuMDk2WiJ9LHsiY2lkIjoxLCJ0cmFuc3BvcnQiOiJ3c3MiLCJ0aW1lc3RhbXAiOiIyMDE2LTA1LTE5VDExOjM5OjQwLjA5OFoifSx7ImNpZCI6MSwic3RhdGUiOiJpbml0aWFsaXplZCIsInRpbWVzdGFtcCI6IjIwMTYtMDUtMTlUMTE6Mzk6NDAuMDk4WiJ9LHsiY2lkIjoxLCJzdGF0ZSI6ImNvbm5lY3RpbmciLCJ0aW1lc3RhbXAiOiIyMDE2LTA1LTE5VDExOjM5OjQwLjA5OVoifSx7ImNpZCI6MSwic3RhdGUiOiJvcGVuIiwidGltZXN0YW1wIjoiMjAxNi0wNS0xOVQxMTozOTo0MS43MTlaIn0seyJzdGF0ZSI6ImNvbm5lY3RlZCIsInBhcmFtcyI6eyJzb2NrZXRfaWQiOiIxOTc2NzAuMTYzMzg3NTkifSwidGltZXN0YW1wIjoiMjAxNi0wNS0xOVQxMTozOTo0MS43MjVaIn1d" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b89f1cb9-5e8d-43e2-815a-649bac5cb8e1" Version="1.1" Url="https://s.youtube.com/api/stats/qoe" ThinkTime="3" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="event" Value="streamingstats" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fmt" Value="244" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="afmt" Value="251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cpn" Value="78Y9okolvl1Kkl3m" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ei" Value="4KQ9V576G420oAPorICoDg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="el" Value="detailpage" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="docid" Value="UAWcs5H-qgQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ns" Value="yt" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fexp" Value="3300116,3300130,3300164,3312381,9406993,9410705,9416126,9416891,9417895,9422596,9428398,9429103,9429805,9431012,9431675,9433096,9433387,9433700,9433946,9433998,9435396,9436447" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cl" Value="122687037" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="html5" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="c" Value="WEB" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cver" Value="1.20160512" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cplayer" Value="UNIPLAYER" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbr" Value="Chrome" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbrver" Value="49.0.2623.112" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cos" Value="Windows" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cosver" Value="6.1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vps" Value="286.533:PL" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bwe" Value="286.533:2293760" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bh" Value="286.533:3.362" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bat" Value="286.533:1:1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cmt" Value="286.533:286.253651" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="87ae37c6-2f4c-4647-9288-a1b956cf7d38" Version="1.1" Url="https://s.youtube.com/api/stats/watchtime?euri" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ns" Value="yt" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="el" Value="detailpage" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cpn" Value="78Y9okolvl1Kkl3m" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="docid" Value="UAWcs5H-qgQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ver" Value="2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="referrer" Value="https://www.youtube.com/watch?v=FOjdXSrtUxA" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cmt" Value="289.561" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="plid" Value="AAUzMF0T8SwgrDtV" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ei" Value="4KQ9V576G420oAPorICoDg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fmt" Value="244" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fs" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="rt" Value="289.987" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="of" Value="BOD2p0rQC_d_DGiFYPexVg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="lact" Value="269645" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cl" Value="122687037" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="state" Value="paused" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vm" Value="CAIQAQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="c" Value="WEB" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cver" Value="1.20160512" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cplayer" Value="UNIPLAYER" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbr" Value="Chrome" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbrver" Value="49.0.2623.112" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cos" Value="Windows" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cosver" Value="6.1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="autonav" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="autoplay" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="delay" Value="4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="hl" Value="en_GB" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cr" Value="IN" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uga" Value="f27" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="len" Value="289.561" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="feature" Value="related-auto" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="afmt" Value="251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="idpj" Value="-6" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ldpj" Value="-3" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="st" Value="268.251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="et" Value="289.561" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vis" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="3e3d830a-0e9b-4de2-9937-f1da994ef9ee" Version="1.1" Url="https://s.youtube.com/api/stats/qoe" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="event" Value="streamingstats" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fmt" Value="244" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="afmt" Value="251" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cpn" Value="78Y9okolvl1Kkl3m" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ei" Value="4KQ9V576G420oAPorICoDg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="el" Value="detailpage" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="docid" Value="UAWcs5H-qgQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ns" Value="yt" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="fexp" Value="3300116,3300130,3300164,3312381,9406993,9410705,9416126,9416891,9417895,9422596,9428398,9429103,9429805,9431012,9431675,9433096,9433387,9433700,9433946,9433998,9435396,9436447" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cl" Value="122687037" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="html5" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="c" Value="WEB" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cver" Value="1.20160512" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cplayer" Value="UNIPLAYER" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbr" Value="Chrome" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cbrver" Value="49.0.2623.112" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cos" Value="Windows" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cosver" Value="6.1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cmt" Value="289.988:289.561,289.988:289.561" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vps" Value="289.988:EN" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bwe" Value="289.988:2293760" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bh" Value="289.988:0.000" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="bat" Value="289.988:1:1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="5a24e82c-ad2a-433f-a2c1-0dbc82d4b5c4" Version="1.1" Url="https://2-edge-chat.facebook.com/pull" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Origin" Value="https://www.facebook.com" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="channel" Value="p_100001687106058" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="seq" Value="253" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="partition" Value="-2" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="clientid" Value="158146d4" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cb" Value="anez" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="idle" Value="13997" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="qp" Value="y" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="cap" Value="8" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="pws" Value="fresh" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="isq" Value="3274" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="msgs_recv" Value="253" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="uid" Value="100001687106058" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="viewer_uid" Value="100001687106058" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sticky_token" Value="489" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="sticky_pool" Value="frc3c09_chat-proxy" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="state" Value="offline" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="mode" Value="stream" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="format" Value="json" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="14912dca-95fd-4976-bc0d-847db228dfdd" Version="1.1" Url="https://www.youtube.com/share_ajax" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-YouTube-Page-CL" Value="122687037" />
+        <Header Name="X-YouTube-Client-Version" Value="1.20160512" />
+        <Header Name="X-YouTube-Page-Label" Value="youtube_20160512_RC3" />
+        <Header Name="X-Youtube-Identity-Token" Value="QUFFLUhqbFlvZU9QUzRHVENCdk16SzQ1M25JbTNZUGoxQXxBQ3Jtc0tuQk1lXzc0d19GQzhCbFlyTk9EeXozdXJGMFRDQXZEdW9VRWdqaDdoNWFVOEY0U0RXSGRXVGw1SmhBQ3BKV1lPZXZpaDJ3QXNqTVR5aEhIbDJLNTNYLXhTUjVJZW0ycXRsUkpOa0RCcENQLUF5VTdzNWEtZktuUThPUVBIV3lOSXhlT29DYm5qSzBwWF92bV9XekdWRlBTZFdYUGc=" />
+        <Header Name="X-YouTube-Variants-Checksum" Value="1592e184c6e4cac88b68e63b0d62e3b1" />
+        <Header Name="X-Client-Data" Value="CJS2yQEIorbJAQjEtskBCP2VygE=" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="action_get_share_box" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="video_id" Value="UAWcs5H-qgQ" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="share_at" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="share_source" Value="watch" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="ei" Value="4KQ9V576G420oAPorICoDg" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="verticals" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+        <QueryStringParameter Name="vertical" Value="0" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+  </Items>
+</WebTest>

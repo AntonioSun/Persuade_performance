@@ -2,11 +2,7 @@
 <WebTest Name="PERS-1641_Forms" Id="f1894e03-4f1f-442a-9bc0-86a2de58caba" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
     <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
-      <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
-      </Items>
-    </TransactionTimer>
+    <TransactionTimer Name="Login" />
     <Comment CommentText="Set Hierarchy" />
     <TransactionTimer Name="Set Hierarchy">
       <Items>
@@ -442,7 +438,7 @@
             <FormPostParameter Name="form_builder[agency_id]" Value="{{Hierarchy.Hierarchy#csv.Tier1Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
             <FormPostParameter Name="form_builder[client_id]" Value="{{Hierarchy.Hierarchy#csv.Tier2Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
             <FormPostParameter Name="form_builder[business_unit_id]" Value="{{Hierarchy.Hierarchy#csv.Tier3Id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
-            <FormPostParameter Name="form_builder[campaign_id]" Value="{{Hierarchy.Hierarchy#csv.CampaignId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="form_builder[campaign_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
             <FormPostParameter Name="form_builder[is_active]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
             <FormPostParameter Name="form_builder[header]" Value="perfTestHeader{{seedNumber}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
             <FormPostParameter Name="form_builder[description]" Value="perfTestDescription{{seedNumber}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />

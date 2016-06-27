@@ -1,45 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LoadTest Name="Persuade" Description="" Owner="" storage="c:\medseek\automation\persuade\vsprojects\persuadeperformance\persuadeperformance\loadtests\persuade.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="62c61e0f-a591-4f37-a81c-d11354e71e47" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
-    <Scenario Name="Scenario1" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+    <Scenario Name="StatsFacebookULM" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
-      <LoadProfile Pattern="Constant" InitialUsers="40" />
+      <LoadProfile Pattern="Step" InitialUsers="1" MaxUsers="20" StepUsers="2" StepDuration="10" StepRampTime="0" />
       <TestMix>
-        <TestProfile Name="PERS-1641_Forms" Path="..\webtests\library\pers-1641_forms.webtest" Id="f1894e03-4f1f-442a-9bc0-86a2de58caba" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1642_LandingPages" Path="..\webtests\library\pers-1642_landingpages.webtest" Id="683d31eb-64c1-48db-8c41-afc8e02a00a1" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1734_Leads" Path="..\webtests\ulm\pers-1734_leads.webtest" Id="5f8b0620-273d-4c6e-9d18-4ea6cd4d7e0d" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1627_FBStats" Path="..\webtests\facebook\pers-1627_fbstats.webtest" Id="5ff27569-f490-461b-b616-33f7199b0a5a" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1639_GoogleStats" Path="..\webtests\google\pers-1639_googlestats.webtest" Id="e2dba266-ea9d-4aca-a668-d5149769fbae" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1640_FormFields" Path="..\webtests\library\pers-1640_formfields.webtest" Id="27b96a5f-b657-4727-bdd9-928c4a2426ad" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1670_Sites" Path="..\webtests\library\pers-1670_sites.webtest" Id="836f4f8b-a3fb-4610-b6b8-f220255a9b2c" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1626_FBCampaigns" Path="..\webtests\facebook\pers-1626_fbcampaigns.webtest" Id="d7a216ba-dd89-476f-8319-d7def216508b" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1628_Targeting" Path="..\webtests\facebook\pers-1628_targeting.webtest" Id="f7bea939-5f1e-449b-b6bf-f45d757139e6" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1638_FBAds" Path="..\webtests\facebook\pers-1638_fbads.webtest" Id="71ae32a6-46c5-4d85-bd2f-5b4e94e7225c" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1658_Creative" Path="..\webtests\library\pers-1658_creative.webtest" Id="ea881d39-d2a1-45ff-a7b9-a43159ea9ba3" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1661_Reviwes" Path="..\webtests\presence\pers-1661_reviwes.webtest" Id="c7c58060-0b49-4274-baf4-2e505dabce7d" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1662_Surveys" Path="..\webtests\presence\pers-1662_surveys.webtest" Id="3aa10243-49cc-4107-9914-82a8df98efc0" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="..\webtests\presence\pers-1665_presencemanager.webtest" Path="..\webtests\presence\pers-1665_presencemanager.webtest" Id="ffcc6a1d-418a-464d-96ab-f74349d84cfd" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1666_Pages" Path="..\webtests\presence\pers-1666_pages.webtest" Id="654f851e-d089-47b2-8c58-93b907b815fd" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1667_Tabs" Path="..\webtests\presence\pers-1667_tabs.webtest" Id="07fc0291-a764-4c09-9698-10f0137bbfae" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1669_SellingPoints" Path="..\webtests\library\pers-1669_sellingpoints.webtest" Id="bedc912d-e894-4a54-b8e0-787ef180fac2" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1673_FBSnapShot" Path="..\webtests\facebook\pers-1673_fbsnapshot.webtest" Id="a879b6b9-8f25-460b-baaf-24b14ff6dce4" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1678_GoogleAds" Path="..\webtests\google\pers-1678_googleads.webtest" Id="74106280-7787-4ac7-81ab-afffc4b27026" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1679_GoogleAdGroups" Path="..\webtests\google\pers-1679_googleadgroups.webtest" Id="958d90c6-38a2-4e65-ba56-2bde77ce8640" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1681_GoogleCampaigns" Path="..\webtests\google\pers-1681_googlecampaigns.webtest" Id="2187c364-4bc7-4c6c-a05b-86af3aa7687b" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1683_BudgetTracker" Path="..\webtests\reports\pers-1683_budgettracker.webtest" Id="2a59cfae-3865-4945-93db-101f89be9bdc" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1684_ConsoleStats" Path="..\webtests\reports\pers-1684_consolestats.webtest" Id="0fe679fc-14ce-40b7-97c8-556645783029" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1685_DirectoryIssues" Path="..\webtests\reports\pers-1685_directoryissues.webtest" Id="5eb6ff3e-c5ea-4af3-bb55-6ce869664552" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1686_DirectoryStats" Path="..\webtests\reports\pers-1686_directorystats.webtest" Id="b28a4648-606f-4c9e-beb6-3dbc2e493437" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1687_GoogleAdWords" Path="..\webtests\reports\pers-1687_googleadwords.webtest" Id="0eef21df-78ca-4467-9c41-4578ccb12967" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1688_LeadStats" Path="..\webtests\reports\pers-1688_leadstats.webtest" Id="518f655e-f63f-4b20-a614-8ec60b4fb5a7" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1689_Medicom" Path="..\webtests\reports\pers-1689_medicom.webtest" Id="9ba3d9c6-ccd5-4cc2-bc42-c93023b17ade" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1690_Monthly" Path="..\webtests\reports\pers-1690_monthly.webtest" Id="feda9afa-0094-47b1-8498-f1e6e426ac2e" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1691_MonthlyLeads" Path="..\webtests\reports\pers-1691_monthlyleads.webtest" Id="2cbdf330-05fa-47cd-85e1-047a91621b28" Percentage="3" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1692_TableauReports" Path="..\webtests\reports\pers-1692_tableaureports.webtest" Id="e915dee3-027a-436f-a361-e95f08372145" Percentage="2" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1693_UserSettings" Path="..\webtests\user menu\pers-1693_usersettings.webtest" Id="dd74efed-c13d-4bcc-abdb-dddf57873cca" Percentage="2" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1733_AI" Path="..\webtests\ulm\pers-1733_ai.webtest" Id="fb65f4cb-36aa-4e0c-a322-ae779332cab0" Percentage="2" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1735_Stats" Path="..\webtests\ulm\pers-1735_stats.webtest" Id="466718cc-cd8a-44a8-9f69-d3a8a996437a" Percentage="2" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        <TestProfile Name="PERS-1676_GoogleSnapShot" Path="..\webtests\google\pers-1676_googlesnapshot.webtest" Id="cc4301a0-fea8-4cf2-9bfc-360e019e388d" Percentage="2" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1626_FBCampaigns" Path="..\webtests\facebook\pers-1626_fbcampaigns.webtest" Id="d7a216ba-dd89-476f-8319-d7def216508b" Percentage="13" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1627_FBStats" Path="..\webtests\facebook\pers-1627_fbstats.webtest" Id="31bf483c-5ff7-46c9-a0c5-ac6c8556ed70" Percentage="0" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1628_Targeting" Path="..\webtests\facebook\pers-1628_targeting.webtest" Id="f7bea939-5f1e-449b-b6bf-f45d757139e6" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1638_FBAds" Path="..\webtests\facebook\pers-1638_fbads.webtest" Id="71ae32a6-46c5-4d85-bd2f-5b4e94e7225c" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1673_FBSnapShot" Path="..\webtests\facebook\pers-1673_fbsnapshot.webtest" Id="a879b6b9-8f25-460b-baaf-24b14ff6dce4" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1674_FBControlPanel" Path="..\webtests\facebook\pers-1674_fbcontrolpanel.webtest" Id="d776b101-2394-4b36-a9d1-adb9e2502315" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1675_FBConvpix" Path="..\webtests\facebook\pers-1675_fbconvpix.webtest" Id="3e43bf61-e9e6-4692-a471-5e5eb988a35a" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1639_GoogleStats" Path="..\webtests\google\pers-1639_googlestats.webtest" Id="e2dba266-ea9d-4aca-a668-d5149769fbae" Percentage="0" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1733_AI" Path="..\webtests\ulm\pers-1733_ai.webtest" Id="fb65f4cb-36aa-4e0c-a322-ae779332cab0" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1734_Leads" Path="..\webtests\ulm\pers-1734_leads.webtest" Id="5f8b0620-273d-4c6e-9d18-4ea6cd4d7e0d" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1735_Stats" Path="..\webtests\ulm\pers-1735_stats.webtest" Id="466718cc-cd8a-44a8-9f69-d3a8a996437a" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </TestMix>
       <BrowserMix>
         <BrowserProfile Percentage="34">
@@ -67,6 +43,199 @@
           <Browser Name="Firefox 40.1" MaxConnections="6">
             <Headers>
               <Header Name="User-Agent" Value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,utf-8;q=0.7,*;q=0.7" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="PresenceAndNurture" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="true" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
+      <LoadProfile Pattern="Constant" InitialUsers="25" />
+      <TestMix>
+        <TestProfile Name="Nurture Campaign" Path="..\webtests\nurture\nurture campaign.webtest" Id="48f2d98e-0e2d-4aa0-95f1-4800c3bf1c6a" Percentage="12" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="Nurture List" Path="..\webtests\nurture\nurture list.webtest" Id="d7711367-18f3-46de-b60d-c613146cd3f9" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1694_NurtureControlPanel" Path="..\webtests\nurture\pers-1694_nurturecontrolpanel.webtest" Id="909e632d-9a2f-4992-9914-ab60389f559e" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1661_Reviwes" Path="..\webtests\presence\pers-1661_reviwes.webtest" Id="c7c58060-0b49-4274-baf4-2e505dabce7d" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1662_Surveys" Path="..\webtests\presence\pers-1662_surveys.webtest" Id="3aa10243-49cc-4107-9914-82a8df98efc0" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1665_PresenceManager" Path="..\webtests\presence\pers-1665_presencemanager.webtest" Id="ffcc6a1d-418a-464d-96ab-f74349d84cfd" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1666_Pages" Path="..\webtests\presence\pers-1666_pages.webtest" Id="654f851e-d089-47b2-8c58-93b907b815fd" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1667_Tabs" Path="..\webtests\presence\pers-1667_tabs.webtest" Id="07fc0291-a764-4c09-9698-10f0137bbfae" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1671_Presence" Path="..\webtests\presence\pers-1671_presence.webtest" Id="8dd8a05e-5089-499e-a118-c90b559c9df9" Percentage="11" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Internet Explorer 9.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Chrome 2" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1;) AppleWebKit/530.1 (KHTML, like Gecko) Chrome/2.0.169.1 Safari/530.1" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="gzip,deflate" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Chrome 47" MaxConnections="2">
+            <Headers>
+              <Header Name="User-Agent" Value="" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="" />
+              <Header Name="Accept-Encoding" Value="" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Firefox 2.0" MaxConnections="2">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,utf-8;q=0.7,*;q=0.7" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="Library" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="true" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
+      <LoadProfile Pattern="Step" InitialUsers="10" MaxUsers="20" StepUsers="2" StepDuration="10" StepRampTime="0" />
+      <TestMix>
+        <TestProfile Name="PERS-1640_FormFields" Path="..\webtests\library\pers-1640_formfields.webtest" Id="27b96a5f-b657-4727-bdd9-928c4a2426ad" Percentage="17" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1641_Forms" Path="..\webtests\library\pers-1641_forms.webtest" Id="f1894e03-4f1f-442a-9bc0-86a2de58caba" Percentage="17" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1642_LandingPages" Path="..\webtests\library\pers-1642_landingpages.webtest" Id="683d31eb-64c1-48db-8c41-afc8e02a00a1" Percentage="17" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1658_Creative" Path="..\webtests\library\pers-1658_creative.webtest" Id="ea881d39-d2a1-45ff-a7b9-a43159ea9ba3" Percentage="17" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1669_SellingPoints" Path="..\webtests\library\pers-1669_sellingpoints.webtest" Id="bedc912d-e894-4a54-b8e0-787ef180fac2" Percentage="16" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1670_Sites" Path="..\webtests\library\pers-1670_sites.webtest" Id="836f4f8b-a3fb-4610-b6b8-f220255a9b2c" Percentage="16" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Internet Explorer 9.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Chrome 2" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1;) AppleWebKit/530.1 (KHTML, like Gecko) Chrome/2.0.169.1 Safari/530.1" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="gzip,deflate" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Chrome 47" MaxConnections="2">
+            <Headers>
+              <Header Name="User-Agent" Value="" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="" />
+              <Header Name="Accept-Encoding" Value="" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Firefox 2.0" MaxConnections="2">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,utf-8;q=0.7,*;q=0.7" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+      </BrowserMix>
+      <NetworkMix>
+        <NetworkProfile Percentage="100">
+          <Network Name="LAN" BandwidthInKbps="1000000" NetworkProfileConfigurationXml="&lt;Emulation&gt;&lt;VirtualChannel name=&quot;defaultChannel&quot;&gt;&lt;FilterList/&gt;&lt;VirtualLink instances=&quot;1&quot; name=&quot;defaultLink&quot;&gt;&lt;LinkRule dir=&quot;upstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;LinkRule dir=&quot;downstream&quot;&gt;&lt;Bandwidth&gt;&lt;Speed unit=&quot;kbps&quot;&gt;1000000&lt;/Speed&gt;&lt;/Bandwidth&gt;&lt;/LinkRule&gt;&lt;/VirtualLink&gt;&lt;/VirtualChannel&gt;&lt;/Emulation&gt;" />
+        </NetworkProfile>
+      </NetworkMix>
+    </Scenario>
+    <Scenario Name="Reports" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="true" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
+      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
+      <LoadProfile Pattern="Step" InitialUsers="10" MaxUsers="20" StepUsers="2" StepDuration="10" StepRampTime="0" />
+      <TestMix>
+        <TestProfile Name="PERS-1683_BudgetTracker" Path="..\webtests\reports\pers-1683_budgettracker.webtest" Id="2a59cfae-3865-4945-93db-101f89be9bdc" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1684_ConsoleStats" Path="..\webtests\reports\pers-1684_consolestats.webtest" Id="0fe679fc-14ce-40b7-97c8-556645783029" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1685_DirectoryIssues" Path="..\webtests\reports\pers-1685_directoryissues.webtest" Id="5eb6ff3e-c5ea-4af3-bb55-6ce869664552" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1686_DirectoryStats" Path="..\webtests\reports\pers-1686_directorystats.webtest" Id="b28a4648-606f-4c9e-beb6-3dbc2e493437" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1687_GoogleAdWords" Path="..\webtests\reports\pers-1687_googleadwords.webtest" Id="0eef21df-78ca-4467-9c41-4578ccb12967" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1688_LeadStats" Path="..\webtests\reports\pers-1688_leadstats.webtest" Id="518f655e-f63f-4b20-a614-8ec60b4fb5a7" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1689_Medicom" Path="..\webtests\reports\pers-1689_medicom.webtest" Id="9ba3d9c6-ccd5-4cc2-bc42-c93023b17ade" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1690_Monthly" Path="..\webtests\reports\pers-1690_monthly.webtest" Id="feda9afa-0094-47b1-8498-f1e6e426ac2e" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1691_MonthlyLeads" Path="..\webtests\reports\pers-1691_monthlyleads.webtest" Id="2cbdf330-05fa-47cd-85e1-047a91621b28" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <TestProfile Name="PERS-1692_TableauReports" Path="..\webtests\reports\pers-1692_tableaureports.webtest" Id="e915dee3-027a-436f-a361-e95f08372145" Percentage="10" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </TestMix>
+      <BrowserMix>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Internet Explorer 9.0" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="GZIP" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Chrome 2" MaxConnections="6">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1;) AppleWebKit/530.1 (KHTML, like Gecko) Chrome/2.0.169.1 Safari/530.1" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
+              <Header Name="Accept-Encoding" Value="gzip,deflate" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Chrome 47" MaxConnections="2">
+            <Headers>
+              <Header Name="User-Agent" Value="" />
+              <Header Name="Accept" Value="*/*" />
+              <Header Name="Accept-Language" Value="" />
+              <Header Name="Accept-Encoding" Value="" />
+              <Header Name="Accept-Charset" Value="ISO-8859-1,*,utf-8" />
+            </Headers>
+          </Browser>
+        </BrowserProfile>
+        <BrowserProfile Percentage="25">
+          <Browser Name="Firefox 2.0" MaxConnections="2">
+            <Headers>
+              <Header Name="User-Agent" Value="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0" />
               <Header Name="Accept" Value="*/*" />
               <Header Name="Accept-Language" Value="{{$IEAcceptLanguage}}" />
               <Header Name="Accept-Encoding" Value="GZIP" />
@@ -1703,7 +1872,7 @@
     </CounterSet>
   </CounterSets>
   <RunConfigurations>
-    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="None" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="500" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="100000" UseTestIterations="false" RunDuration="600" WarmupTime="120" CoolDownTime="120" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="50" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="2" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" RigType="">
+    <RunConfiguration Name="Run Settings1" Description="" ResultsStoreType="Database" TimingDetailsStorage="None" SaveTestLogsOnError="true" SaveTestLogsFrequency="0" MaxErrorDetails="500" MaxErrorsPerType="1000" MaxThresholdViolations="1000" MaxRequestUrlsReported="100000" UseTestIterations="false" RunDuration="1200" WarmupTime="120" CoolDownTime="120" TestIterations="100" WebTestConnectionModel="ConnectionPerUser" WebTestConnectionPoolSize="50" SampleRate="15" ValidationLevel="High" SqlTracingConnectString="" SqlTracingConnectStringDisplayValue="" SqlTracingDirectory="" SqlTracingEnabled="false" SqlTracingFileCount="2" SqlTracingRolloverEnabled="true" SqlTracingMinimumDuration="500" RunUnitTestsInAppDomain="true" RigType="">
       <CounterSetMappings>
         <CounterSetMapping ComputerName="54.243.152.58">
           <CounterSetReferences>

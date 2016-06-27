@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="PERS-1673" Id="a879b6b9-8f25-460b-baaf-24b14ff6dce4" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+<WebTest Name="PERS-1673_FBSnapShot" Id="a879b6b9-8f25-460b-baaf-24b14ff6dce4" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
     <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
+    <TransactionTimer Name="Login" />
+    <Comment CommentText="Set Hierarchy" />
+    <TransactionTimer Name="Set Hierarchy">
       <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+        <IncludedWebTest Name="FacebookSetHierarchy" Path="..\global tests\facebooksethierarchy.webtest" Id="61c300c0-ffed-4ee3-9546-737082702bda" IsCodedWebTest="False" InheritWebTestSettings="False" />
       </Items>
     </TransactionTimer>
     <Comment CommentText="Facebook Snapshot" />
@@ -15,13 +17,28 @@
             <Header Name="Upgrade-Insecure-Requests" Value="1" />
             <Header Name="If-None-Match" Value="&quot;5a5cd6244e2d0ca2ea111997f7238f81&quot;" />
           </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="campaignId" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="data-skip-pjax=&quot;true&quot; href=&quot;/campaigns/" />
+                <RuleParameter Name="EndsWith" Value="/edit&quot;&gt;" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
         </Request>
       </Items>
     </TransactionTimer>
     <Comment CommentText="Click a Campaign" />
     <TransactionTimer Name="Click a Campaign">
       <Items>
-        <Request Method="GET" Guid="c6b8dce3-5a38-4aba-b7eb-b16a2e6b184f" Version="1.1" Url="{{ServerUrl}}/campaigns/443/edit" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="c6b8dce3-5a38-4aba-b7eb-b16a2e6b184f" Version="1.1" Url="{{ServerUrl}}/campaigns/{{campaignId}}/edit" ThinkTime="0" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="X-CSRF-Token" Value="{{authToken}}" />
             <Header Name="X-Requested-With" Value="XMLHttpRequest" />

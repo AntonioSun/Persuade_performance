@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="GoogleStats" Id="e2dba266-ea9d-4aca-a668-d5149769fbae" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+<WebTest Name="PERS-1639_GoogleStats" Id="e2dba266-ea9d-4aca-a668-d5149769fbae" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
     <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
-      <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
-      </Items>
-    </TransactionTimer>
+    <TransactionTimer Name="Login" />
     <Comment CommentText="Set Hierarchy" />
     <TransactionTimer Name="Set Hierarchy">
       <Items>
@@ -18,7 +14,7 @@
         <RuleParameters>
           <RuleParameter Name="ContextParameterName" Value="tier1" />
           <RuleParameter Name="ComparisonOperator" Value="Equals" />
-          <RuleParameter Name="Value" Value="BrightWhistle" />
+          <RuleParameter Name="Value" Value="Brightwhistle" />
           <RuleParameter Name="IgnoreCase" Value="True" />
           <RuleParameter Name="UseRegularExpression" Value="False" />
         </RuleParameters>

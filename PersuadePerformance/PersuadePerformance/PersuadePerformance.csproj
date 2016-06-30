@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="stcongoogleCoded.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Campaigns.csv" />
@@ -81,9 +80,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="LoadTests\Persuade.loadtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Webtests\Facebook\camp.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Webtests\Facebook\PERS-1627_FBStats.webtest">
@@ -160,9 +156,6 @@
     <None Include="Webtests\Presence\test.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Webtests\Reports\monthlyLeads.webtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Webtests\Reports\PERS-1687_GoogleAdWords.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -226,6 +219,9 @@
     <None Include="Webtests\Directory Management\PERS-1663_Locations.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Webtests\Scenarios\Reports.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Webtests\ULM\PERS-1733_AI.webtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -254,9 +250,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Webtests\Scenarios\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TestPlugin\TestPlugin.csproj">
       <Project>{41233aa9-f768-427f-9b78-0ffab4966668}</Project>

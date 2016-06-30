@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Reports" Id="87b7884c-9ea2-4edd-9f46-427f0a38b189" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Comment CommentText="Login" />
+    <TransactionTimer Name="Login">
+      <Items>
+        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+    <TransactionTimer Name="Reports">
+      <Items>
+        <TransactionTimer Name="Budget Tracker">
+          <Items>
+            <IncludedWebTest Name="PERS-1683_BudgetTracker" Path="..\reports\pers-1683_budgettracker.webtest" Id="2a59cfae-3865-4945-93db-101f89be9bdc" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Console Stats">
+          <Items>
+            <IncludedWebTest Name="PERS-1684_ConsoleStats" Path="..\reports\pers-1684_consolestats.webtest" Id="0fe679fc-14ce-40b7-97c8-556645783029" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Directory Issues">
+          <Items>
+            <IncludedWebTest Name="PERS-1685_DirectoryIssues" Path="..\reports\pers-1685_directoryissues.webtest" Id="5eb6ff3e-c5ea-4af3-bb55-6ce869664552" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Directory Stats">
+          <Items>
+            <IncludedWebTest Name="PERS-1686_DirectoryStats" Path="..\reports\pers-1686_directorystats.webtest" Id="b28a4648-606f-4c9e-beb6-3dbc2e493437" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Google AdWords">
+          <Items>
+            <IncludedWebTest Name="PERS-1687_GoogleAdWords" Path="..\reports\pers-1687_googleadwords.webtest" Id="0eef21df-78ca-4467-9c41-4578ccb12967" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Lead Stats">
+          <Items>
+            <IncludedWebTest Name="PERS-1688_LeadStats" Path="..\reports\pers-1688_leadstats.webtest" Id="518f655e-f63f-4b20-a614-8ec60b4fb5a7" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Medicom">
+          <Items>
+            <IncludedWebTest Name="PERS-1689_Medicom" Path="..\reports\pers-1689_medicom.webtest" Id="9ba3d9c6-ccd5-4cc2-bc42-c93023b17ade" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Monthly">
+          <Items>
+            <IncludedWebTest Name="PERS-1690_Monthly" Path="..\reports\pers-1690_monthly.webtest" Id="feda9afa-0094-47b1-8498-f1e6e426ac2e" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Monthly Leads">
+          <Items>
+            <IncludedWebTest Name="PERS-1691_MonthlyLeads" Path="..\reports\pers-1691_monthlyleads.webtest" Id="2cbdf330-05fa-47cd-85e1-047a91621b28" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+        <TransactionTimer Name="Tableau Reports">
+          <Items>
+            <IncludedWebTest Name="PERS-1692_TableauReports" Path="..\reports\pers-1692_tableaureports.webtest" Id="e915dee3-027a-436f-a361-e95f08372145" IsCodedWebTest="False" InheritWebTestSettings="False" />
+          </Items>
+        </TransactionTimer>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="Logout" />
+    <TransactionTimer Name="Logout">
+      <Items>
+        <IncludedWebTest Name="Logout" Path="..\global tests\logout.webtest" Id="d3fdf484-19a8-4f02-9276-177652939958" IsCodedWebTest="False" InheritWebTestSettings="False" />
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />
+  </WebTestPlugins>
+</WebTest>

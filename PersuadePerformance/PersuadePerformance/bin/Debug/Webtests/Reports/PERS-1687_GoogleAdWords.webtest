@@ -1,61 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="PERS-1687" Id="0eef21df-78ca-4467-9c41-4578ccb12967" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+<WebTest Name="PERS-1687_GoogleAdWords" Id="0eef21df-78ca-4467-9c41-4578ccb12967" Owner="" Priority="0" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>
-    <Comment CommentText="Login" />
-    <TransactionTimer Name="Login">
-      <Items>
-        <IncludedWebTest Name="Login" Path="..\global tests\login.webtest" Id="6e961aa2-1090-4a72-8f5c-09858eb28a54" IsCodedWebTest="False" InheritWebTestSettings="False" />
-      </Items>
-    </TransactionTimer>
     <Comment CommentText="Google AdWords" />
     <TransactionTimer Name="Google Adwords">
       <Items>
-        <Request Method="GET" Guid="70b596fc-084b-4418-9006-7f2c63f33e90" Version="1.1" Url="{{ServerUrl}}/reports/13" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="70b596fc-084b-4418-9006-7f2c63f33e90" Version="1.1" Url="{{ServerUrl}}/reports/{{googleAdWords}}" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="Upgrade-Insecure-Requests" Value="1" />
             <Header Name="If-None-Match" Value="&quot;440708ad5e0541d92a9cf619fc1572fc&quot;" />
           </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Google Adwords Reports" />
+                <RuleParameter Name="IgnoreCase" Value="True" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
         </Request>
       </Items>
     </TransactionTimer>
     <Comment CommentText="Run Report" />
     <TransactionTimer Name="Run Report">
       <Items>
-        <Request Method="GET" Guid="fd3b3a3a-fe4b-48d2-9a71-2eb2997b340a" Version="1.1" Url="{{ServerUrl}}/reports/13" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+        <Request Method="GET" Guid="fd3b3a3a-fe4b-48d2-9a71-2eb2997b340a" Version="1.1" Url="{{ServerUrl}}/reports/{{googleAdWords}}" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
           <Headers>
             <Header Name="X-CSRF-Token" Value="{{authToken}}" />
             <Header Name="X-Requested-With" Value="XMLHttpRequest" />
             <Header Name="X-PJAX" Value="true" />
           </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Google Adwords Reports" />
+                <RuleParameter Name="IgnoreCase" Value="True" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
           <QueryStringParameters>
             <QueryStringParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="s" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="parameters[force]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
-            <QueryStringParameter Name="parameters[agency_id]" Value="1" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
-            <QueryStringParameter Name="parameters[client_id]" Value="3" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
-            <QueryStringParameter Name="parameters[business_unit_id]" Value="2847" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[agency_id]" Value="{{brightwhistle}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[client_id]" Value="{{peidmontHealthcare}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="{{bariatrics}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="time_frame" Value="All Time" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="parameters[from]" Value="01/01/2000 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="user_submitted_date_from" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="parameters[to]" Value="12/31/2016 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="user_submitted_date_to" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
-            <QueryStringParameter Name="parameters[report_id]" Value="24" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[report_id]" Value="{{criteriaPerformanceReport}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
             <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
           </QueryStringParameters>
         </Request>
       </Items>
     </TransactionTimer>
-    <Comment CommentText="Logout" />
-    <TransactionTimer Name="Logout">
+    <Comment CommentText="Download Report" />
+    <TransactionTimer Name="Download Report">
       <Items>
-        <IncludedWebTest Name="Logout" Path="..\global tests\logout.webtest" Id="d3fdf484-19a8-4f02-9276-177652939958" IsCodedWebTest="False" InheritWebTestSettings="False" />
+        <Request Method="GET" Guid="fd3b3a3a-fe4b-48d2-9a71-2eb2997b340a" Version="1.1" Url="{{ServerUrl}}/reports/{{googleAdWords}}.csv" ThinkTime="-4" Timeout="60" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Upgrade-Insecure-Requests" Value="1" />
+          </Headers>
+          <ValidationRules>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Account" />
+                <RuleParameter Name="IgnoreCase" Value="True" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+            <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+              <RuleParameters>
+                <RuleParameter Name="FindText" Value="Ad group ID" />
+                <RuleParameter Name="IgnoreCase" Value="True" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="PassIfTextFound" Value="True" />
+              </RuleParameters>
+            </ValidationRule>
+          </ValidationRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="utf8" Value="✓" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="s" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[force]" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[agency_id]" Value="{{brightwhistle}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[client_id]" Value="{{peidmontHealthcare}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[business_unit_id]" Value="{{bariatrics}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="time_frame" Value="All Time" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[from]" Value="01/01/2000 12:00 am" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_from" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[to]" Value="12/31/2016 11:59 pm" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date_to" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="user_submitted_date" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="parameters[report_id]" Value="{{criteriaPerformanceReport}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+            <QueryStringParameter Name="_pjax" Value="true" RecordedValue="" CorrelationBinding="" UrlEncode="True" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
       </Items>
     </TransactionTimer>
-    <Comment CommentText="" />
   </Items>
   <ContextParameters>
     <ContextParameter Name="ServerUrl" Value="https://staging.brightwhistle.com" />
+    <ContextParameter Name="googleAdWords" Value="13" />
+    <ContextParameter Name="brightwhistle" Value="1" />
+    <ContextParameter Name="peidmontHealthcare" Value="3" />
+    <ContextParameter Name="bariatrics" Value="2847" />
+    <ContextParameter Name="criteriaPerformanceReport" Value="24" />
   </ContextParameters>
   <WebTestPlugins>
     <WebTestPlugin Classname="TestPlugin.ServerUrls, TestPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="ServerUrls" Description="" />

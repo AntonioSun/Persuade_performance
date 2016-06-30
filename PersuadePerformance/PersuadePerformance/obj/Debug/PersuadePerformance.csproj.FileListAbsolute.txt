@@ -66,5 +66,4 @@ C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformanc
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_PresenceAndNurture.loadtest
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_StatsFacebookULM.loadtest
 C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\LoadTests\Persuade_Google.loadtest
-C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Facebook\camp.webtest
-C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Reports\monthlyLeads.webtest
+C:\Medseek\Automation\Persuade\VSProjects\PersuadePerformance\PersuadePerformance\bin\Debug\Webtests\Scenarios\Reports.webtest
